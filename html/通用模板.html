@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--**
+ *Created by wf_H on 2018/8/6.
+ *by:web_hwf@sina.com
+ *-->
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>模板</title>
+
+    <!--使用IE兼容模式渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/zui@1.8.1/css/zui.min.css">
+    <link rel="stylesheet" href="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/zui@1.8.1/css/zui-theme.css">
+    <link rel="stylesheet" href="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/zui@1.8.1/lib/kindeditor/kindeditor.min.css">
+    <link rel="stylesheet" href="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/hover.css">
+
+    <link rel="stylesheet" href="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/h-base.css">
+    <link rel="stylesheet" href="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/h-index.css">
+
+</head>
+<body class="childrenBody">
+
+<!--返回按钮-->
+<a href="javascript:;" class="out_btn">
+    <span> < </span> 广州市总工会《2018年学历教育补贴》
+</a>
+
+
+<!--nav 部件-->
+<div class="nav_list">
+    <div class="text_title" >模块名称</div>
+
+    <button class="btn  btn_add pull-right" style="margin: 10px 0 0 10px"> 导出数据</button>
+    <button class="btn  btn_add pull-right" style="margin: 10px 0 0 10px" onclick="showModal3()"> 查看历史审核意见</button>
+    <button class="btn  btn_add pull-right" style="margin: 10px 0 0 10px" onclick="showModal2()"> <span class="label label-primary">3</span>上报全部数据</button>
+    <button class="btn  btn_add pull-right" style="margin: 10px 0 0 10px" onclick="showModal()"><span class="label label-primary">2</span>导入数据</button>
+    <button class="btn  btn_add pull-right" style="margin: 10px 0 0 10px"><span class="label label-primary">1</span>下载填报模板</button>
+</div>
+<!--搜索内容-->
+<div class="search_form">
+    <div class="row">
+        <div class="col-lg-9 col-md-12" style="float:right;">
+            <div class="input-group input_jygl">
+                <span class="input-group-addon fix-border fix-padding">全部时间</span>
+                <select class="form-control">
+                    <option value="1">近一个月</option>
+                    <option value="1">...</option>
+                </select>
+                <span class="input-group-addon fix-border fix-padding">全部类型</span>
+                <select class="form-control">
+                    <option value="1">补贴订单</option>
+                    <option value="1">...</option>
+                </select>
+                <span class="input-group-addon fix-border fix-padding">全部状态</span>
+                <select class="form-control">
+                    <option value="1">已回款</option>
+                    <option value="1">...</option>
+                </select>
+                <span class="input-group-addon fix-border fix-padding">全部工会</span>
+                <select class="form-control">
+                    <option value="1">产业工会</option>
+                    <option value="1">...</option>
+                </select>
+                <span class="input-group-addon fix-border fix-padding"></span>
+                <input type="text" class="form-control" placeholder="请输入工会/企业名称">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button" style="padding-left: 25px ;padding-right: 25px">搜索</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--选项卡-->
+<div class="tab_list_header">
+    <div class="row">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>职工姓名</th>
+                <th>手机号</th>
+                <th>补贴名称</th>
+                <th>补贴类型</th>
+                <th>补贴发放机构</th>
+                <th>补贴金额</th>
+                <th>申报日期</th>
+                <th>审核状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>王长春</td>
+                <td>15155555555</td>
+                <td>广州市职工提素圆梦工程
+                    2018年学历教育补助（春季）</td>
+                <td>学历</td>
+                <td>广东省总工会</td>
+                <td><strong class="color_03">￥1500</strong></td>
+                <td>2018-09-08</td>
+                <td>市工会审核通过</td>
+                <td>
+                    <button class="btn  btn-sm btn-primary">查看详情</button>
+                </td>
+            </tr>
+            <tr>
+                <td>王长春</td>
+                <td>15155555555</td>
+                <td>广州市职工提素圆梦工程
+                    2018年学历教育补助（春季）</td>
+                <td>学历</td>
+                <td>广东省总工会</td>
+                <td><strong class="color_03">￥1500</strong></td>
+                <td>2018-09-08</td>
+                <td>市工会审核通过</td>
+                <td>
+                    <button class="btn  btn-sm btn-primary">查看详情</button>
+                </td>
+            </tr>
+            <tr>
+                <td>王长春</td>
+                <td>15155555555</td>
+                <td>广州市职工提素圆梦工程
+                    2018年学历教育补助（春季）</td>
+                <td>学历</td>
+                <td>广东省总工会</td>
+                <td><strong class="color_03">￥1500</strong></td>
+                <td>2018-09-08</td>
+                <td>市工会审核通过</td>
+                <td>
+                    <button class="btn  btn-sm btn-primary">查看详情</button>
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+
+
+        <div class="row" style="text-align: center">
+            <ul class="pager">
+                <li class="previous"><a href="#">« 上一页</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">6</a></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li><a href="#">9</a></li>
+                <li><a href="###" data-toggle="pager" data-placement="top">...</a></li>
+                <li><a href="#">12</a></li>
+                <li class="next"><a href="#">下一页 »</a></li>
+                <div class="input-group" style="width: 100px;float: left;margin-left: 10px">
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">GO</button>
+                </span>
+                </div>
+                <li><div class="pager-label">共 <strong>89</strong> 页</div></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<div class="sjtj_list">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="sjtj_item hvr-outline-in">
+                <div class="text_top">
+                    越秀区<span>补贴率：63%</span>
+                </div>
+                <table class="table">
+		            <thead>
+		            <tr>
+		                <th></th>
+		                <th>报读人数</th>
+		                <th>补贴人数</th>
+		                <th>补贴金额</th>
+		            </tr>
+		            </thead>
+		
+		            <tbody>
+			            <tr>
+			                <td>农民工</td>
+			                <td>5000人</td>
+			                <td>3000人</td>
+			                <td>300万</td>
+			            </tr>
+			            <tr>
+			                <td>农民工</td>
+			                <td>5000人</td>
+			                <td>3000人</td>
+			                <td>300万</td>
+			            </tr>
+		            </tbody>
+		
+		        </table>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="sjtj_item hvr-outline-in">
+                <div class="text_top">
+                    越秀区<span>补贴率：63%</span>
+                </div>
+                <table class="table">
+		            <thead>
+		            <tr>
+		                <th></th>
+		                <th>报读人数</th>
+		                <th>补贴人数</th>
+		                <th>补贴金额</th>
+		            </tr>
+		            </thead>
+		
+		            <tbody>
+			            <tr>
+			                <td>农民工</td>
+			                <td>5000人</td>
+			                <td>3000人</td>
+			                <td>300万</td>
+			            </tr>
+			            <tr>
+			                <td>农民工</td>
+			                <td>5000人</td>
+			                <td>3000人</td>
+			                <td>300万</td>
+			            </tr>
+		            </tbody>
+		
+		        </table>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="sjtj_item hvr-outline-in">
+                <div class="text_top">
+                    越秀区<span>补贴率：63%</span>
+                </div>
+                <table class="table">
+		            <thead>
+		            <tr>
+		                <th></th>
+		                <th>报读人数</th>
+		                <th>补贴人数</th>
+		                <th>补贴金额</th>
+		            </tr>
+		            </thead>
+		
+		            <tbody>
+			            <tr>
+			                <td>农民工</td>
+			                <td>5000人</td>
+			                <td>3000人</td>
+			                <td>300万</td>
+			            </tr>
+			            <tr>
+			                <td>农民工</td>
+			                <td>5000人</td>
+			                <td>3000人</td>
+			                <td>300万</td>
+			            </tr>
+		            </tbody>
+		
+		        </table>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="text-align: center">
+
+        <ul class="pager">
+            <li class="previous"><a href="#">« 上一页</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="###" data-toggle="pager" data-placement="top">...</a></li>
+            <li><a href="#">12</a></li>
+            <li class="next"><a href="#">下一页 »</a></li>
+            <div class="input-group" style="width: 100px;float: left;margin-left: 10px">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">GO</button>
+                </span>
+            </div>
+            <li><div class="pager-label">共 <strong>89</strong> 页</div></li>
+        </ul>
+
+
+    </div>
+</div>
+
+<div class="sjtj_nav_list">
+	<div class="text_title">2018年广汽集团职工报读&补贴数据填报<span>上报截止时间：2018-06-08 24:00:00</span></div>
+	<p>如果已采用中国职工网的职工教育网平台发放补贴，此数据将自动采集，无需额外填报。</p>
+</div>
+<div class="sjtj_list">
+    <div class="row">
+        <div class="col-lg-offset-4 col-md-offset-3 col-sm-offset-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="sjtj_item hvr-outline-in">
+                <div class="text_top">
+                    2018年度数据填报
+                </div>
+                <table class="table">
+		            <thead>
+		            <tr>
+		                <th></th>
+		                <th>报读人次</th>
+		                <th>补贴人次</th>
+		                <th>补贴金额</th>
+		            </tr>
+		            </thead>
+		
+		            <tbody>
+			            <tr>
+			                <td>农民工</td>
+			                <td>110</td>
+			                <td>30</td>
+			                <td>3万</td>
+			            </tr>
+			            <tr>
+			                <td>产业工人</td>
+			                <td>190</td>
+			                <td>150</td>
+			                <td>300万</td>
+			            </tr>
+		            </tbody>
+		
+		        </table>
+		        <div style="" class="footer_list text-center">
+			        <button class="btn  btn-sm btn-primary" style="padding: 5px 30px">开始填报</button>
+			        <p class="">最后录入时间 2018-03-28 12:35</p>
+			    </div>
+            </div>
+        </div>
+        <div class="text-center col-lg-12 col-md-12 col-xs-12">
+        	<p style="color: #f00;">报名时间快截止了，请抓紧时间填报！</p>
+        </div>
+    </div>
+</div>
+<div class="nav_list">
+    <div class="text_title" style="float: inherit">信息发布</div>
+</div>
+<form class="form-horizontal sjtj_list" >
+    <div class="form-group">
+        <label for="" class="col-sm-2">信息类型：</label>
+        <div class="col-md-6 col-sm-10">
+           <select class="form-control" id="">
+                <option>北京</option>
+                <option>上海</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">置顶排序号：</label>
+        <div class="col-md-6 col-sm-10">
+            <input type="text" class="form-control" id="" placeholder="数值越大排序越靠前">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">标题：</label>
+        <div class="col-md-6 col-sm-10">
+            <input type="text" class="form-control" id="" placeholder="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">摘要：</label>
+        <div class="col-md-6 col-sm-10">
+            <textarea name="" rows="3" cols="" style="width: 100%;"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">内容：</label>
+        <div class="col-md-6 col-sm-10">
+            <textarea id="editor_id" name="content" class="form-control kindeditor2" style="height:450px;">Hello, world!</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2">相关附件：</label>
+        <div class="col-md-6 col-sm-10">
+        	<input type="file" name="" class="form-control">
+        </div>
+    </div>
+    <div style="text-align: center">
+        <button class="btn btn-primary" style="padding: 10px 50px;margin-right: 30px;">保存</button>
+        <button class="btn btn_add" style="padding: 10px 50px">取消</button>
+    </div>
+</form>
+<!--导入补贴数据-->
+<div class="modal fade"  id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                <h4 class="modal-title">导入补贴数据</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-muted">请先选择真理后的补贴数据文件，再点击开始导入，如果数据量大，可能需要较长的时间，请耐性等待导入完成</p>
+                <p class="text-muted">导入后系统将提示导入结果，如导入不成功，请下载贷入失败的数据，并根据失败原因，重新整理数据，重新导入。</p>
+
+                <div class="input-group" style="border: 1px solid #4987C0;margin-bottom: 20px">
+                    <input id="file" type="file" class="form-control" style="opacity:0;">
+                    <input id="fileName" type="text" style="position: absolute;left: 0;right: 0;bottom: 0;top: 0;width: 80%;padding: 0 10px;border: 0" placeholder="请点击选择文件">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">开始导入</button>
+                    </span>
+                </div>
+
+                <div class="alert alert-primary">
+                    <h4>导入结果</h4>
+                    <p>总计导入数据3200条</p>
+                    <p>1.恭喜你，成功导入2000（无需处理） <a href="jvascript:;" download="" class="pull-right">下载</a></p>
+                    <p>1.恭喜你，成功导入2000（无需处理） <a href="jvascript:;" download="" class="pull-right">下载</a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--数据确认-->
+<div class="modal fade"  id="myModal2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                <h4 class="modal-title">数据确认</h4>
+            </div>
+            <div class="modal-body">
+
+                <table class="table table-bordered">
+                    <tr>
+                        <td class="bg-primary">2018年度补贴人数</td>
+                        <td>150人</td>
+                        <td class="bg-primary">总金额</td>
+                        <td>11.5万</td>
+                    </tr>
+                    <tr>
+                        <td class="bg-primary">学历</td>
+                        <td>150人</td>
+                        <td class="bg-primary">金额</td>
+                        <td>11.5万</td>
+                    </tr>
+                    <tr>
+                        <td class="bg-primary">职业技能</td>
+                        <td>150人</td>
+                        <td class="bg-primary">金额</td>
+                        <td>11.5万</td>
+                    </tr>
+                </table>
+
+                <div class="alert alert-primary">
+                    <p>如果数据确认无误，请点击提交开始上报数据</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">我再看看</button>
+                <button type="button" class="btn btn-primary">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--数据汇总-->
+<div class="modal fade"  id="myModal3">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+                <h4 class="modal-title">广汽集团  补贴数据汇总     <small class="text-muted">(2018-04-08 12:12:12)</small></h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="alert alert-primary">
+                    <h4>汇总意见（驳回）： <small class="text-primary pull-right">2018-04-08 12:12:12</small></h4>
+                    <p>数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有
+                        遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏</p>
+                </div>
+                <div class="alert alert-primary">
+                    <h4>汇总意见（驳回）：<small class="text-primary pull-right">2018-04-08 12:12:12</small></h4>
+                    <p>数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有
+                        遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏</p>
+                </div>
+                <div class="alert alert-primary">
+                    <h4>汇总意见（驳回）：<small class="text-primary pull-right">2018-04-08 12:12:12</small></h4>
+                    <p>数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有
+                        遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏数据有遗漏</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/zui@1.8.1/js/zui.js"></script>
+<script type="text/javascript" src="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/zui@1.8.1/lib/kindeditor/kindeditor.min.js"></script>
+<!--复选美化-->
+<script src="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/icheck.min.js"></script>
+<script>
+    function showModal() {
+//        $('#myModal').modal('show', 'fit')
+        $('#myModal').modal({
+            keyboard : false,
+            backdrop:'static' ,
+            show     : true
+        })
+
+//        $('#myModal').modal('show', 'fit')   //手动隐藏
+    }
+
+    function showModal2() {
+        $('#myModal2').modal('show', 'fit')
+//        $('#myModal').modal('show', 'fit')   //手动隐藏
+    }
+    function showModal3() {
+        $('#myModal3').modal('show', 'fit')
+//        $('#myModal').modal('show', 'fit')   //手动隐藏
+    }
+    $('#file').change(function(){
+        $('#fileName').val($('#file').val());
+    });
+
+
+
+</script>
+<script >
+
+    /*======================================================
+    *@author wf_Huang
+    *@Time 2018/8/15 16:51
+    *=======================================================
+    *@function  初始化富文本编辑器
+    *=====================================================*/
+   
+    window.editor2 = KindEditor.create('textarea.kindeditor2', {
+        basePath: '/dist/lib/kindeditor/',
+        allowFileManager : true,
+        bodyClass : 'article-content'
+    });
+
+    function getTextarea() {  //里面为获取富文本编辑器的内容
+        editor2.sync();
+        var ahtml = editor2.html();
+        console.log(ahtml);
+    }
+
+    
+
+    
+</script>
+</body>
+</html>

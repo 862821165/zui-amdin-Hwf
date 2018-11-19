@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<!--**
+ *Created by wf_H on 2018/8/6.
+ *by:web_hwf@sina.com
+ *-->
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>交易管理</title>
+
+    <!--使用IE兼容模式渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/zui@1.8.1/css/zui.min.css">
+    <link rel="stylesheet" href="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/zui@1.8.1/css/zui-theme.css">
+    <link rel="stylesheet" href="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/hover.css">
+
+    <link rel="stylesheet" href="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/h-base.css">
+    <link rel="stylesheet" href="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/h-index.css">
+</head>
+<body class="childrenBody">
+
+<!--nav 部件-->
+<div class="nav_list">
+    <div class="text_title" style="float: inherit">交易管理</div>
+</div>
+
+
+
+<!--搜索内容-->
+<div class="search_form">
+    <div class="row">
+        <div class="col-lg-9 col-md-12" style="float:right;">
+            <div class="input-group input_jygl">
+                <span class="input-group-addon fix-border fix-padding">全部时间</span>
+                <select class="form-control">
+                    <option value="1">近一个月</option>
+                    <option value="1">...</option>
+                </select>
+                <span class="input-group-addon fix-border fix-padding">全部类型</span>
+                <select class="form-control">
+                    <option value="1">补贴订单</option>
+                    <option value="1">...</option>
+                </select>
+                <span class="input-group-addon fix-border fix-padding">全部状态</span>
+                <select class="form-control">
+                    <option value="1">已回款</option>
+                    <option value="1">...</option>
+                </select>
+                <span class="input-group-addon fix-border fix-padding">全部工会</span>
+                <select class="form-control">
+                    <option value="1">产业工会</option>
+                    <option value="1">...</option>
+                </select>
+                <span class="input-group-addon fix-border fix-padding"></span>
+                <input type="text" class="form-control" placeholder="请输入工会/企业名称">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button" style="padding-left: 25px ;padding-right: 25px">搜索</button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--标签说明-->
+<div class="teb_title_text">
+    <div class="text_alt">
+        当前结果的交易订单总计：180万元
+    </div>
+</div>
+
+<!--选项卡-->
+<div class="tab_list_header">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_01">待回款</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+                <button class="btn  btn-primary"> 回款确认</button>
+
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item ">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_02">已回款</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_03">进行中</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+                <button class="btn  btn-primary"> 回款确认</button>
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_01">待回款</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+                <button class="btn  btn-primary"> 回款确认</button>
+
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item ">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_02">已回款</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_03">进行中</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+                <button class="btn  btn-primary"> 回款确认</button>
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_01">待回款</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+                <button class="btn  btn-primary"> 回款确认</button>
+
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item ">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_02">已回款</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_03">进行中</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+                <button class="btn  btn-primary"> 回款确认</button>
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_01">待回款</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+                <button class="btn  btn-primary"> 回款确认</button>
+
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item ">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_02">已回款</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item cur">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <div class="teb_item hvr-glow">
+                <div class="top_title">
+                    <h3 class="h_text_sl_1">广东省职工教育网 </h3>
+                    <span class="alt_text color_03">进行中</span>
+                    <p class="footer_text">
+                        <span>订单金额：25万元</span>
+                        <span>订单类型：补贴订单</span>
+                    </p>
+                </div>
+                <div class="body_title">
+                    <h3 class="h_text_sl_1">2018年工会干部培训等2个项目 </h3>
+                    <div class="number_list">
+                        <div class="number_item">
+                            <p class="text_title">职工人数</p>
+                            <strong>12人</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">补贴金额</p>
+                            <strong>600万</strong>
+                        </div>
+                        <div class="number_item">
+                            <p class="text_title">费用比例</p>
+                            <strong>0</strong>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn_ck"> 查看详情</button>
+                <button class="btn  btn-primary"> 回款确认</button>
+                <div class="progress_bar_list">
+                    <a href="javascript:;" class="bar_item">
+                        <p>创建订单</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item">
+                        <p>订单完成</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                    <a href="javascript:;" class="bar_item">
+                        <p>回款确认</p>
+                        <div class="bar_bg"></div>
+                        <p>2018.08.09</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="text-align: center">
+
+        <ul class="pager">
+            <li class="previous"><a href="#">« 上一页</a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="###" data-toggle="pager" data-placement="top">...</a></li>
+            <li><a href="#">12</a></li>
+            <li class="next"><a href="#">下一页 »</a></li>
+            <div class="input-group" style="width: 100px;float: left;margin-left: 10px">
+                <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">GO</button>
+                </span>
+            </div>
+            <li><div class="pager-label">共 <strong>89</strong> 页</div></li>
+        </ul>
+
+
+    </div>
+</div>
+
+
+<script type="text/javascript" src="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/zui@1.8.1/js/zui.min.js"></script>
+
+<!--复选美化-->
+<script src="http://css.tt.gzedu.com/workeredu_cn/platform_admin/v1.0/style/dist/icheck.min.js"></script>
+<script>
+    /*初始化多选美化*/
+    $(document).ready(function () {
+        $(".i-checks").iCheck({checkboxClass: "icheckbox_square-green", radioClass: "iradio_square-green",})
+    });
+
+    $(function () {
+        $('.nav_list').on('click', 'a', function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+
+
+    })
+</script>
+</body>
+</html>

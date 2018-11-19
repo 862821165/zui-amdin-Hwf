@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--**
+ *Created by wf_H on 2018/9/11.
+ *by:web_hwf@sina.com
+ *-->
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>工作台</title>
+
+    <!--使用IE兼容模式渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="style/dist/zui@1.8.1/css/zui.min.css">
+    <link rel="stylesheet" href="style/dist/zui@1.8.1/css/zui-theme.css">
+    <link rel="stylesheet" href="style/dist/hover.css">
+    <link rel="stylesheet" href="style/dist/animate.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_626490_2smdpt7a4mk.css">
+
+    <link rel="stylesheet" href="style/h-admin.css">
+
+
+</head>
+<body style="background-color: #F0F3F7">
+
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <!-- 导航头部 -->
+        <div class="navbar-header">
+            <!-- 移动设备上的导航切换按钮 -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- 品牌名称或logo -->
+            <a class="navbar-brand"  href="javascript:;">职工网后台</a>
+            <button  id="mini" class="btn btn-sm " type="button" style="margin: 10px 13px;padding: 5px 10px;background-color: rgba(96, 110, 123, 0.56);border-color: #293846;"><i class="icon icon-list-ul" style="color: #ffffff"></i></button>
+            <button class="btn btn-sm " type="button" style="padding: 5px 20px;background-color: rgba(96, 110, 123, 0.56);border-color: #293846;"><i class="icon icon-home" style="color: #ffffff"></i></button>
+        </div>
+        <!-- 导航项目 -->
+        <div class="collapse navbar-collapse navbar-collapse-example">
+            <!-- 一般导航项目 -->
+            <ul class="nav navbar-nav">
+                <li><a  href="javascript:;">项目</a></li>
+                <li><a  href="javascript:;">需求</a></li>
+                <!-- 导航中的下拉菜单 -->
+                <li class="dropdown">
+                    <a  href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">管理 <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a  href="javascript:;">任务</a></li>
+                        <li><a  href="javascript:;">待办</a></li>
+                        <li><a  href="javascript:;">Bug</a></li>
+                        <li class="divider"></li>
+                        <li><a  href="javascript:;">测试</a></li>
+                        <li><a  href="javascript:;">用例</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="img_tab_list">
+                <div class="item_tab">
+                    <a href="javascript:;"><i class="iconfont icon-tel"></i></a>
+                    <div class="tab_body">
+                        <div class="input-group">
+                            <input type="text" id="tel_search" class="form-control" placeholder="输入号码点击回车键发起呼叫">
+                            <span class="input-group-btn">
+                              <button class="btn btn_my" type="button"><i class="iconfont icon-weibiaoti-"></i></button>
+                            </span>
+                        </div>
+                        <div class="list_tel">
+                            <div class="item_tel"><i class="iconfont icon-huchu"></i> 今天 09:52  <span>未知客户(15124524544)</span></div>
+                            <div class="item_tel"><i class="iconfont icon-huchu"></i> 今天 09:52  <span>未知客户(15124524544)</span></div>
+                            <div class="item_tel"><i class="iconfont icon-huchu"></i> 今天 09:52  <span>未知客户(15124524544)</span></div>
+                            <div class="item_tel"><i class="iconfont icon-huchu"></i> 今天 09:52  <span>未知客户(15124524544)</span></div>
+                            <div class="item_tel"><i class="iconfont icon-huchu"></i> 今天 09:52  <span>未知客户(15124524544)</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_tab">
+                    <a href="javascript:;"><i class="iconfont icon-msg"></i></a>
+                    <div class="tab_body">
+                        <p class="title_text">
+                            发短信<span data-toggle="tooltip" data-tip-class="tooltip-primary"  data-placement="right"  title="提示内容"><i class="iconfont icon-tishi"></i></span>
+                        </p>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="输入手机号">
+                            <span class="input-group-btn">
+                              <button class="btn btn_my" type="button">发送</button>
+                            </span>
+                        </div>
+
+                        <p class="title_text">请选择模板发送</p>
+                        <select class="form-control">
+                            <option value="">xxxxxxxxxxxxxxxxxx</option>
+                            <option value="">xxxxxxxxxxxxxxxxxx</option>
+                            <option value="">xxxxxxxxxxxxxxxxxx</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <form class="navbar-form navbar-left" role="search" style="margin: 9px;">
+                <div class="form-group">
+                    <input type="text" id="input_search" class="form-control" placeholder="请输入您要查询的企业名称或手机号">
+                </div>
+                <button type="button" class="btn btn-default" style="margin-left: -4px;"><i class="icon-search"></i></button>
+            </form>
+            <!-- 右侧的导航项目 -->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a  href="javascript:;" rightMuen><i class="icon icon-chat-line" style="font-size: 16px;"></i><span style="padding: 1px 2px;position: absolute;z-index: 99"  class="label label-info">12</span></a></li>
+                <li><a  href="javascript:;" rightMuen><i class="icon icon-calendar" style="font-size: 16px;"><span style="padding: 1px 2px;position: absolute;z-index: 99" class="label label-info">12</span></i></a></li>
+                <li><a  href="html/信息发布.html" leftMuen>信息发布</a></li>
+                <li class="dropdown dropdown-hover">
+                    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">交易管理 <b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="html/交易管理-回款确认.html" leftMuen>回款确定</a></li>
+                        <li><a href="html/交易管理-培训查看详情.html" leftMuen>查看详情</a></li>
+                        <li><a href="html/交易管理-职工网查看详情.html" leftMuen>职工详情</a></li>
+                        <li class="divider"></li>
+                        <li><a href="html/交易管理-补贴查看详情.html" leftMuen>补贴详情</a></li>
+                    </ul>
+                </li>
+                <li><a  href="javascript:;">个人中心</a></li>
+
+                <li class="dropdown">
+                    <a  href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="images/tx.png"  class="img-circle tx-img" alt="" width="30" height="30">
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a  href="javascript:;">敏捷开发</a></li>
+                        <li><a  href="javascript:;">HTML5</a></li>
+                        <li><a  href="javascript:;">Javascript</a></li>
+                        <li class="divider"></li>
+                        <li><a  href="html/login.html">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- END .navbar-collapse -->
+    </div>
+</nav>
+
+<section class="main_body">
+    <div class="main_nav_left">
+        <div class="nav">
+            <ul>
+                <li class="nav-item">
+                    <a href="javascript:;"><i class="icon icon-star-half-full"></i><span>产品服务</span><i class="iconfont icon-right"></i></a>
+                    <ul>
+                        <li><a href="html/产品与服务-每日一课.html" leftMuen><span>每日一课</span></a></li>
+                        <li><a href="html/产品与服务-求学圆梦.html" leftMuen><span>求学圆梦</span></a></li>
+                        <li><a href="html/产品与服务-职工培训产品.html" leftMuen><span>职工培训</span></a></li>
+                        <li><a href="html/产品与服务-职工教育网.html" leftMuen><span>职工教育</span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="javascript:;"><i class="icon icon-star-half-full"></i><span>客户管理</span><i class="iconfont icon-right"></i></a>
+                    <ul>
+                        <li><a href="html/客户管理-客户档案.html" rightMuen><span>客户档案</span></a></li>
+                        <li><a href="html/客户管理-意向客户管理.html" rightMuen><span>意向客户</span></a></li>
+                        <li><a href="javascript:;" rightMuen><span>登录日志</span></a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="html/客户管理-意向客户管理.html" leftMuen><i class="icon icon-star-half-full"></i><span>表单页</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bg_scellc"></div>
+    <div class="main_contain">
+        <iframe id="left_iframe" src="index.html" frameborder="0" style="width: 100%;height:100%;"></iframe>
+    </div>
+
+
+    <!--悬浮菜单-->
+
+    <div class="main_xf_nav">
+        <i class="icon icon-th"></i>
+        <ul class="">
+            <li   data-toggle="tooltip" data-tip-class="tooltip-success" title="" data-original-title="信息发布"><a class="li_item" href="javascript:;" ><i class="icon icon-bar-chart-alt"></i></a></li>
+            <li><a class="li_item" href="javascript:;" ><i class="icon icon-bar-chart-alt"  data-toggle="tooltip" data-tip-class="tooltip-success" title="" data-original-title="信息发布"></i></a></li>
+            <li><a class="li_item" href="javascript:;" title="xxx"><i class="icon icon-bar-chart-alt"></i></a></li>
+            <li><a class="li_item" href="javascript:;" title="xxx"><i class="icon icon-bar-chart-alt"></i></a></li>
+            <li><a class="li_item" href="javascript:;" title="xxx"><i class="icon icon-bar-chart-alt"></i></a></li>
+            <li><a class="li_item" href="javascript:;" title="xxx"><i class="icon icon-bar-chart-alt"></i></a></li>
+            <li><a class="li_item" href="javascript:;" title="xxx"><i class="icon icon-bar-chart-alt"></i></a></li>
+            <li><a class="li_item" href="javascript:;" title="xxx"><i class="icon icon-bar-chart-alt"></i></a></li>
+            <li><a class="li_item" href="javascript:;" title="xxx"><i class="icon icon-bar-chart-alt"></i></a></li>
+        </ul>
+    </div>
+
+    <div class="main_right">
+        <div class="shouqi_btn"   data-toggle="tooltip" data-placement="left" title="点击展开/关闭">
+            <i class=" iconfont icon-shouqi" ></i>
+        </div>
+
+        <iframe id="right_iframe"  src="index2.html" frameborder="0" style="width: 100%;height:100%;"></iframe>
+    </div>
+</section>
+
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="style/dist/zui@1.8.1/js/zui.min.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
+<script>
+
+    $(function () {
+        $('.img_tab_list .item_tab').on('click','a',function () {
+            $(this).next().toggle() ;
+
+            if($(this).parent().siblings().find('.tab_body').is(":visible")){
+                $(this).parent().siblings().find('.tab_body').toggle() ;
+            }
+            if($(this).children('i').hasClass('icon-tel')) {
+                getCallHistory();
+            }
+            if($(this).children('i').hasClass('icon-msg')) {
+                getSendSmsHtml()
+            }
+
+        })
+
+
+
+        //初始化提示
+        $('[data-toggle="tooltip"]').tooltip();
+        //显示在左边
+        $('body').on('click','a[leftMuen]',function (e) {
+            e.preventDefault();
+            var _href = $(this).attr('href') ;
+            if(_href != 'javascript:;' ){
+                $('#left_iframe').attr('src',_href) ;
+            }
+
+            if(!$('.shouqi_btn').hasClass('active')){
+                $('.main_contain').animate({right:'15px'}) ;
+                $('.main_right').animate({width:'0'}) ;
+                $('.shouqi_btn').addClass('active') ;
+            }
+
+
+        });
+
+        //显示在右边
+        $('body').on('click','a[rightMuen]',function (e) {
+            e.preventDefault();
+            var _href = $(this).attr('href') ;
+            if(_href != 'javascript:;' ){
+                $('#right_iframe').attr('src',_href) ;
+
+                if($('.shouqi_btn').hasClass('active')){
+                    //将右边展开
+                    $('.main_contain').animate({right:'360px'}) ;
+                    $('.main_right').animate({width:'350px'}) ;
+                    $('.shouqi_btn').removeClass('active') ;
+                }
+
+            }
+        });
+
+        //回车搜索
+        var event = arguments.callee.caller.arguments[0] || window.event;// 消除浏览器差异
+        $('#input_search').keydown(function(event) {
+            if (event.keyCode == 13) {
+                alert('你输入的值是' + $('#input_search').val());
+            }
+        });
+
+        $('#tel_search').keydown(function(event) {
+            if (event.keyCode == 13) {
+                alert('你输入的值是' + $('#tel_search').val());
+            }
+        });
+
+
+        //监听storage值的变化
+        window.addEventListener("storage", function (e) {
+
+
+            if(e.key == 'foo'){
+
+                if(e.newValue != 'javascript:;'){
+
+                    localStorage.setItem('foo', 'javascript:;');
+                }
+            }
+        });
+    })
+
+
+
+</script>
+</body>
+</html>

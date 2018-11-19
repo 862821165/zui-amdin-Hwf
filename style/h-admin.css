@@ -1,0 +1,86 @@
+@charset "UTF-8";
+@import url(h-base.css);
+/*顶部导航菜单样式覆盖*/
+.navbar .navbar-nav li a { padding-top: 10px; padding-bottom: 10px; line-height: 30px; }
+.navbar .navbar-nav .tx-img { display: block; }
+.navbar .navbar-form:hover input { background-color: #ffffff; border: 0; color: #666666; }
+.navbar .navbar-form:hover button { background-color: #ffffff; border: 1px solid #ffffff; color: #666666; }
+.navbar .navbar-form input { background-color: #3C5266; border: 0; color: #ffffff; height: 31px; width: 230px; }
+.navbar .navbar-form button { background-color: #3C5266; border: 1px solid #3C5266; color: #ffffff; height: 31px; }
+
+.main_body { position: fixed; top: 50px; left: 0; right: 0; bottom: 0; }
+.main_body .bg_scellc { width: 20px; position: absolute; left: 190px; top: 2px; bottom: 0; background-color: #F0F3F7; }
+.main_body .main_nav_left { width: 210px; position: absolute; left: 0; top: 2px; bottom: 0; overflow-x: hidden; overflow-y: scroll; }
+.main_body .main_nav_left .nav { width: 200px; min-height: 100%; background: #263238; transition: all .3s; }
+.main_body .main_nav_left .nav ul { padding-left: 0; }
+.main_body .main_nav_left .nav a { display: block; overflow: hidden; padding-left: 20px; line-height: 46px; max-height: 46px; color: #abb1b7; transition: all 0.3s; }
+.main_body .main_nav_left .nav a span { margin-left: 10px; }
+.main_body .main_nav_left .nav-item { position: relative; }
+.main_body .main_nav_left .nav-item .show_span { position: absolute; display: block !important; top: 0; left: 50px; padding: 0 30px; color: #abb1b7; width: 165px; z-index: 99; background: #3c474c; overflow: hidden; }
+.main_body .main_nav_left .nav-item.nav-show { border-bottom: 0; }
+.main_body .main_nav_left .nav-item ul { display: none; background: rgba(0, 0, 0, 0.1); }
+.main_body .main_nav_left .nav-item.nav-show ul { display: block; }
+.main_body .main_nav_left .nav-item > a:before { content: ""; position: absolute; left: 0; width: 2px; height: 46px; background: #34a0ce; opacity: 0; transition: all 0.3s; }
+.main_body .main_nav_left .nav .nav-icon { font-size: 20px; position: absolute; margin-left: -1px; }
+.main_body .main_nav_left .icon-right { float: right; line-height: 50px; margin-right: 20px; font-size: 12px; transition: transform 0.3s; }
+.main_body .main_nav_left .nav-show .icon-right { transform: rotate(90deg); }
+.main_body .main_nav_left .nav-show, .main_body .main_nav_left .nav-item > a:hover { color: #fff; background: rgba(0, 0, 0, 0.1); }
+.main_body .main_nav_left .nav-show > a:before, .main_body .main_nav_left .nav-item > a:hover:before { opacity: 1; }
+.main_body .main_nav_left .nav-item li:hover a { color: #fff; background: rgba(0, 0, 0, 0.1); }
+.main_body .main_nav_left .nav-mini.nav { width: 60px; }
+.main_body .main_nav_left .nav-mini.nav .nav-item > a span { display: none; }
+.main_body .main_nav_left .nav-mini.nav .icon-right { margin-right: -20px; }
+.main_body .main_nav_left .nav-mini.nav .nav-item ul { position: absolute; top: 0; left: 60px; width: 165px; z-index: 99; background: #3c474c; overflow: hidden; }
+.main_body .main_nav_left .nav-mini.nav .nav-item:hover { background: rgba(255, 255, 255, 0.1); }
+.main_body .main_nav_left .nav-mini.nav .nav-item:hover .nav-item a { color: #fff; }
+.main_body .main_nav_left .nav-mini.nav .nav-item:hover a:before { opacity: 1; }
+.main_body .main_nav_left .nav-mini.nav .nav-item:hover ul { display: block; }
+.main_body .main_contain { position: absolute; left: 200px; top: 2px; bottom: 0; right: 310px; }
+.main_body .main_right { position: absolute; right: 0px; top: 3px; bottom: 0px; width: 300px; box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); }
+.main_body .main_right .shouqi_btn { position: absolute; top: 0; bottom: 0; transform: rotate(180deg); color: #000; vertical-align: middle; text-align: center; width: 31px; left: -31px; background-color: #F0F3F7; }
+.main_body .main_right .shouqi_btn i { vertical-align: middle; position: absolute; top: 50%; left: 4px; }
+.main_body .main_right .active { transform: rotate(0deg); }
+.main_body .main_right:hover .shouqi_btn { cursor: pointer; background-color: #e4eaf3; }
+.main_body .main_xf_nav { position: fixed; bottom: 30px; right: 100px; z-index: 9999; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; margin: 70px auto; cursor: pointer; text-align: center; font-size: 1.75em; font-weight: bold; transition: 0.24s 0.2s; background-color: #368BFF; }
+.main_body .main_xf_nav i { font-size: 20px; line-height: 33px; color: #ffffff; }
+.main_body .main_xf_nav:hover { background: #2a6aff; }
+.main_body .main_xf_nav:hover ul { transition: transform 0.4s 0.08s, z-index 0s 0.5s; transform: scale(1); z-index: 1; }
+.main_body .main_xf_nav:hover ul li { transition: all 0.6s; }
+.main_body .main_xf_nav:hover ul li:nth-child(1) { transition-delay: 0.02s; transform: rotate(245deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(1) a { transition-delay: 0.04s; transform: rotate(475deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(2) { transition-delay: 0.04s; transform: rotate(285deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(2) a { transition-delay: 0.08s; transform: rotate(435deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(3) { transition-delay: 0.06s; transform: rotate(325deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(3) a { transition-delay: 0.12s; transform: rotate(395deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(4) { transition-delay: 0.08s; transform: rotate(365deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(4) a { transition-delay: 0.16s; transform: rotate(355deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(5) { transition-delay: 0.1s; transform: rotate(405deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(5) a { transition-delay: 0.2s; transform: rotate(315deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(6) { transition-delay: 0.12s; transform: rotate(445deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(6) a { transition-delay: 0.24s; transform: rotate(275deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(7) { transition-delay: 0.14s; transform: rotate(485deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(7) a { transition-delay: 0.28s; transform: rotate(235deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(8) { transition-delay: 0.16s; transform: rotate(525deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(8) a { transition-delay: 0.32s; transform: rotate(195deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(9) { transition-delay: 0.18s; transform: rotate(565deg); }
+.main_body .main_xf_nav:hover ul li:nth-child(9) a { transition-delay: 0.36s; transform: rotate(155deg); }
+.main_body .main_xf_nav ul { list-style: none; padding: 0; margin: 0; position: absolute; top: -76px; left: -76px; border: 100px solid transparent; cursor: default; border-radius: 50%; transform: scale(0); transition: transform 1.4s 0.07s; z-index: -1; }
+.main_body .main_xf_nav ul li { position: absolute; top: -70px; left: -70px; transform-origin: 70px 70px; transition: all 0.5s 0.1s; }
+.main_body .main_xf_nav ul li a { width: 45px; height: 45px; line-height: 50px; border-radius: 50%; position: absolute; font-size: 60%; background-color: #368BFF; transition: 0.6s; }
+.main_body .main_xf_nav ul li a:hover { background: #2a6aff; }
+.main_body .main_xf_nav ul li a i { font-size: 20px; line-height: 33px; color: #ffffff; }
+
+.img_tab_list { float: left; display: flex; flex-wrap: wrap; vertical-align: middle; margin-left: 50px; }
+.img_tab_list .item_tab { padding: 0 10px; position: relative; }
+.img_tab_list .item_tab a { line-height: 63px; height: 50px; display: block; }
+.img_tab_list .item_tab a i { font-size: 28px; color: #ffffff; }
+.img_tab_list .item_tab .tab_body { display: none; position: absolute; top: 50px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.75); padding: 10px; z-index: 99; background-color: #ffffff; width: 300px; left: -120px; }
+.img_tab_list .item_tab .tab_body:after { content: '▲'; color: #ffffff; position: absolute; top: -13px; left: 46%; }
+.img_tab_list .item_tab .tab_body .list_tel { margin-top: 10px; line-height: 25px; }
+.img_tab_list .item_tab .tab_body .list_tel i { color: #4787BF; }
+.img_tab_list .item_tab .tab_body .list_tel span { color: #4787BF; }
+.img_tab_list .item_tab .tab_body .btn_my { color: #ffffff; background-color: #4787BF; }
+.img_tab_list .item_tab .tab_body .title_text { line-height: 35px; margin: 0; }
+.img_tab_list .item_tab .tab_body .title_text i { font-size: 14px; margin-left: 5px; }
+
+/*# sourceMappingURL=h-admin.css.map */
