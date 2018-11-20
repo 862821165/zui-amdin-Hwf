@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(h-base.css);
+@import url(view.css);
 /*顶部导航菜单样式覆盖*/
 .navbar .navbar-nav li a { padding-top: 10px; padding-bottom: 10px; line-height: 30px; }
 .navbar .navbar-nav .tx-img { display: block; }
