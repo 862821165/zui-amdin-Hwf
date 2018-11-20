@@ -27,10 +27,16 @@ button, input, select, textarea { font-size:100%; }
 table { border-collapse:collapse; border-spacing:0; }
 
 /*预设颜色库*/
-.c_danger{color: #FF6666}
-.c_point{color: #FFFF00}
-.c_blue{color: #0a67fb;}
-.c_blue{color: #FF9966;}
-.c_blue{color: #0066CC;}
+.c_01{color: #FF6666}
+.c_02{color: #FFFF00}
+.c_03{color: #0a67fb;}
+.c_04{color: #FF9966;}
+.c_05{color: #0066CC;}
+.c_06{color: #339933;}
+.c_07{color: #FFCC33;}
+.c_08{color: #336699;}
+.c_09{color: #FF9900;}
+.c_10{color: #FFFFCC;}
+.c_11{color: #336699;}
 
 
