@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--**
+ *
+ *----------Created by 黄伟峰 on 2018/11/20.----------
+ * 　　　┏┓　　　┏┓
+ * 　　┏┛┻━━━┛┻┓
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　━　　　┃
+ * 　　┃　┳┛　┗┳　┃
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　┻　　　┃
+ * 　　┃　　　　　　　┃
+ * 　　┗━┓　　　┏━┛
+ * 　　　　┃　　　┃神兽保佑
+ * 　　　　┃　　　┃代码无BUG！
+ * 　　　　┃　　　┗━━━┓
+ * 　　　　┃　　　　　　　┣┓
+ * 　　　　┃　　　　　　　┏┛
+ * 　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　┃┫┫　┃┫┫
+ * 　　　　　┗┻┛　┗┻┛
+ * ━━━━━━神兽出没━━━━━━by:web_hwf@sina.com
+ *-->
+<head>
+    <meta charset="UTF-8">
+    <title>按钮</title>
+
+    <!--响应式约束-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1 user-scalable=no"/>
+    <!--使用IE兼容模式渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../style/dist/zui@1.8.1/css/zui.min.css">
+    <link rel="stylesheet" href="../style/h-admin.css">
+
+    <link rel="stylesheet" href="css/initialize.css">
+
+
+</head>
+<body>
+
+
+<article class="article" style="padding: 10px;background-color: #e5e5e5;">
+    <header>
+        <dl class="dl-inline pull-right">
+            <dt>修改人：</dt>
+            <dd>WF_Huang</dd>
+            <dt>修改日期：</dt>
+            <dd>2018年11月20日 (星期二) 16:00</dd>
+            <dt></dt>
+            <dd class="pull-right">
+                <span class="label label-success">checkbox</span>
+                <span class="label label-warning">单选</span>
+                <span class="label label-danger">多选</span>
+        </dl>
+        <h1 style="font-size: 24px;">按钮</h1>
+    </header>
+</article>
+
+
+<div id="page" class="">
+    <div id="pageBody" class="scrollbar-hover">
+        <div class="container">
+            <div id="pageContent">
+
+                <article>
+                    <p>提供日常项目中遇到的所有按钮。</p>
+                </article>
+
+                <section>
+                    <header><h3>基本按钮</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <button type="button" class="btn_common">普通按钮</button>
+                            <button type="button" class="btn_arc">弧角按钮</button>
+                            <button type="button" class="btn_left_arc">左弧按钮</button>
+                            <button type="button" class="btn_right_arc">右弧按钮</button>
+                            <button type="button" class="btn_round">圆角按钮</button>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+
+    .btn_common{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+    }
+    .btn_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-radius: 5px;
+    }
+    .btn_left_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    .btn_right_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    .btn_round{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-radius: 50px;
+    }
+
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+
+                <section>
+                    <header><h3>自适应宽度按钮</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <button type="button" class="btn_w_common">普通按钮</button>
+                            <button type="button" class="btn_w_arc">弧角按钮</button>
+                            <button type="button" class="btn_w_left_arc">左弧按钮</button>
+                            <button type="button" class="btn_w_right_arc">右弧按钮</button>
+                            <button type="button" class="btn_w_round">圆角按钮</button>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+
+    .btn_w_common{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+    .btn_w_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-radius: 5px;
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+    .btn_w_left_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+    .btn_w_right_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+    .btn_w_round{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-radius: 50px;
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--**
+ *
+ *----------Created by 黄伟峰 on 2018/11/20.----------
+ * 　　　┏┓　　　┏┓
+ * 　　┏┛┻━━━┛┻┓
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　━　　　┃
+ * 　　┃　┳┛　┗┳　┃
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　┻　　　┃
+ * 　　┃　　　　　　　┃
+ * 　　┗━┓　　　┏━┛
+ * 　　　　┃　　　┃神兽保佑
+ * 　　　　┃　　　┃代码无BUG！
+ * 　　　　┃　　　┗━━━┓
+ * 　　　　┃　　　　　　　┣┓
+ * 　　　　┃　　　　　　　┏┛
+ * 　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　┃┫┫　┃┫┫
+ * 　　　　　┗┻┛　┗┻┛
+ * ━━━━━━神兽出没━━━━━━by:web_hwf@sina.com
+ *-->
+<head>
+    <meta charset="UTF-8">
+    <title>按钮</title>
+
+    <!--响应式约束-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1 user-scalable=no"/>
+    <!--使用IE兼容模式渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../style/dist/zui@1.8.1/css/zui.min.css">
+    <link rel="stylesheet" href="../style/h-admin.css">
+
+    <link rel="stylesheet" href="css/initialize.css">
+
+
+</head>
+<body>
+
+
+<article class="article" style="padding: 10px;background-color: #e5e5e5;">
+    <header>
+        <dl class="dl-inline pull-right">
+            <dt>修改人：</dt>
+            <dd>WF_Huang</dd>
+            <dt>修改日期：</dt>
+            <dd>2018年11月20日 (星期二) 14:30</dd>
+            <dt></dt>
+            <dd class="pull-right">
+                <span class="label label-success">输入框</span>
+                <span class="label label-warning">input</span>
+        </dl>
+        <h1 style="font-size: 24px;">输入框</h1>
+    </header>
+</article>
+
+
+<div id="page" class="">
+    <div id="pageBody" class="scrollbar-hover">
+        <div class="container">
+            <div id="pageContent">
+
+                <article>
+                    <p>提供输入框的各种初始化需求，这里我们初始化的的输入框高度为35px,实际情况根据要求修改padding ,或者加一个height。</p>
+                </article>
+
+                <section>
+                    <header><h3>基础输入框</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <input type="text" class="input_common" placeholder="请输入文字内容">
+                            <input type="number" class="input_common" placeholder="请输入数字内容">
+                            <select type="number" class="input_common" >
+                                <option value="">请选择内容</option>
+                                <option value="">xxxxxxx</option>
+                            </select>
+                            <textarea name="" id="" cols="80" rows="10" class="input_common" placeholder="请输入文本内容"></textarea>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .input_common { border: 1px solid #e5e5e5; padding: 8px; color: #333333; }
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+
+                <section>
+                    <header><h3>数字输入框</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <div class="input_number">
+                                <a href="javascript:;" class="num_reduce"><span></span></a>
+                                <input type="text" class="num_input" value="3" id="num">
+                                <a href="javascript:;" class="num_add"><span></span></a>
+                            </div>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .input_number { border: 1px solid #e3e3e3; display: inline-block; text-align: center; }
+    .input_number .num_reduce { width: 24px; height: 28px; display: block; background: #fff; float: left; }
+    .input_number .num_reduce span { background: url(../images/shopping_cart.png) no-repeat -40px -22px; display: block; width: 6px; height: 2px; margin: 13px auto 0 auto; }
+    .input_number .num_input { background: #f4f4f4; width: 42px; height: 28px; line-height: 28px; border: none; text-align: center; }
+    .input_number .num_add { width: 24px; height: 28px; display: block; background: #fff; float: right; }
+    .input_number .num_add span { background: url(../images/shopping_cart.png) no-repeat -60px -22px; display: block; width: 8px; height: 8px; margin: 10px auto 0 auto; }
+                            </code>
+                        </pre>
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-js">
+                              <!--js 代码-->
+    $(".num_add").click(function(){
+        var num=$(this).siblings("#num").attr('value');
+        num++;
+        $(this).siblings("#num").attr('value',num);
+    })
+    $(".num_reduce").click(function(){
+        var num=$(this).siblings("#num").attr('value');
+        if(num>1){
+            num--;
+            $(this).siblings("#num").attr('value',num);
+            if(num==1){
+                return
+            }
+        }
+    })
+                            </code>
+                        </pre>
+                        <div class="alert alert-warning">
+                            <h4>替代原生数字输入框</h4>
+                            <p>原生的数组输入框在不同浏览器上面<code> type="number"</code>浏览器样式不一。</p>
+                        </div>
+                    </article>
+                </section>
+
+                <section>
+                    <header><h3>文件上传</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <div class="input_file">
+                                <input type="text" class="upload-tip" placeholder="选择文件">
+                                <input type="file" class="upload-input-file">
+                            </div>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .input_file { width: 250px; height: 35px; position: relative; }
+    .input_file input { border: 1px solid #e5e5e5; padding: 8px; color: #333333; }
+    .input_file input[type="text"] { position: absolute; width: 100%; bottom: 0; top: 0; left: 0; right: 0; z-index: 1; }
+    .input_file input[type="file"] { position: absolute; width: 100%; bottom: 0; top: 0; left: 0; right: 0; z-index: 2; opacity: 0; }
+                            </code>
+                        </pre>
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-js">
+                              <!--js 代码-->
+    $(".upload-input-file").change(function () {
+        if ($(this).parent().html().indexOf("class=\"upload-url\"") != -1) {
+            var fileUrl = $(this).val();
+            $(this).parent().children(".upload-url").val(fileUrl);
+        }
+        else {
+            var fileUrl = $(this).val();
+            var urlArr = fileUrl.split("\\");
+            var getName = urlArr[urlArr.length - 1];//截取路径并获取文件的名字
+            $(this).parent().children(".upload-tip").val(getName);
+        }
+    });
+                            </code>
+                        </pre>
+                        <div class="alert alert-warning">
+                            <h4>上传的内容</h4>
+                            <p>上传的内容依然在<code>input type="file" class="upload-input-file"</code>上,直接<code>$(".upload-input-file")[0].files</code>拿到要上传数据。</p>
+                        </div>
+                    </article>
+                </section>
+
+                <section>
+                    <header><h3>上传图片</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <div class="input_img">
+                                <img id="up_img" src="images/up_img.png" alt="">
+                                <input id="imgInput" type="file" class="upload-input-file">
+                            </div>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .input_img { border: 1px solid #e5e5e5; padding: 8px; text-align: center; position: relative; }
+    .input_img img { height: 350px; }
+    .input_img input[type="file"] { position: absolute; width: 100%; bottom: 0; top: 0; left: 0; right: 0; z-index: 2; opacity: 0; cursor: pointer; }
+                            </code>
+                        </pre>
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-js">
+                              <!--js 代码-->
+    $("#imgInput").change(function(){
+        $("#up_img").attr("src",URL.createObjectURL($(this)[0].files[0]));
+    });
+                             </code>
+                        </pre>
+                        <div class="alert alert-warning">
+                            <h4>上传的内容</h4>
+                            <p>上传的内容依然在<code>input type="file" class="upload-input-file"</code>上,直接<code>$(".upload-input-file")[0].files</code>拿到要上传数据。</p>
+                        </div>
+                    </article>
+                </section>
+
+                <section>
+                    <header><h3>无限级选择</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <div class="input_img">
+                                <img id="up_img" src="images/up_img.png" alt="">
+                                <input id="imgInput" type="file" class="upload-input-file">
+                            </div>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+
+                             </code>
+                        </pre>
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-js">
+                              <!--js 代码-->
+                             </code>
+                        </pre>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+    $(function () {
+        $(".num_add").click(function(){
+            var num=$(this).siblings("#num").attr('value');
+            num++;
+            $(this).siblings("#num").attr('value',num);
+        })
+        $(".num_reduce").click(function(){
+            var num=$(this).siblings("#num").attr('value');
+            if(num>1){
+                num--;
+                $(this).siblings("#num").attr('value',num);
+                if(num==1){
+                    return
+                }
+            }
+        })
+
+        $(".upload-input-file").change(function () {
+            if ($(this).parent().html().indexOf("class=\"upload-url\"") != -1) {
+                var fileUrl = $(this).val();
+                $(this).parent().children(".upload-url").val(fileUrl);
+            }
+            else {
+                var fileUrl = $(this).val();
+                var urlArr = fileUrl.split("\\");
+                var getName = urlArr[urlArr.length - 1];//截取路径并获取文件的名字
+                $(this).parent().children(".upload-tip").val(getName);
+            }
+        });
+
+        $("#imgInput").change(function(){
+            $("#up_img").attr("src",URL.createObjectURL($(this)[0].files[0]));
+        });
+
+    })
+</script>
+</body>
+</html>

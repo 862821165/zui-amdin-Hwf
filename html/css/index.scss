@@ -12,6 +12,8 @@ $c_09: #FF9900;
 $c_10: #FFFFCC;
 $c_11: #336699;
 
+
+/*按钮组件*/
 .btn_common {
   border: 0;
   padding: 10px 20px;
@@ -432,6 +434,124 @@ $c_11: #336699;
     right: -10px;
   }
 }
+
+/*输入框组件*/
+
+.input_common{
+  border: 1px solid #e5e5e5;
+  padding: 8px;
+  color: #333333;
+}
+
+.input_number{
+  border: 1px solid #e3e3e3;
+  display: inline-block;
+  text-align: center;
+  .num_reduce{
+    width: 24px;
+    height: 28px;
+    display: block;
+    background: #fff;
+    float: left;
+    span {
+      background: url(../images/shopping_cart.png) no-repeat -40px -22px;
+      display: block;
+      width: 6px;
+      height: 2px;
+      margin: 13px auto 0 auto;
+    }
+  }
+  .num_input{
+    background: #f4f4f4;
+    width: 42px;
+    height: 28px;
+    line-height: 28px;
+    border: none;
+    text-align: center;
+  }
+  .num_add{
+    width: 24px;
+    height: 28px;
+    display: block;
+    background: #fff;
+    float: right;
+    span {
+      background: url(../images/shopping_cart.png) no-repeat -60px -22px;
+      display: block;
+      width: 8px;
+      height: 8px;
+      margin: 10px auto 0 auto;
+    }
+  }
+}
+
+
+.input_file{
+  width: 250px;
+  height: 35px;
+  position: relative;
+  input{
+    border: 1px solid #e5e5e5;
+    padding: 8px;
+    color: #333333;
+  }
+  input[type="text"]{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  input[type="file"]{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    opacity: 0;
+  }
+}
+
+.input_img{
+  border: 1px solid #e5e5e5;
+  padding: 8px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  img{
+    height: 150px;
+  }
+  input[type="file"]{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
