@@ -41,69 +41,164 @@
 <body>
 
 
-<article class="article article-condensed">
+<article class="article" style="padding: 10px;background-color: #e5e5e5;">
     <header>
         <dl class="dl-inline pull-right">
             <dt>修改人：</dt>
             <dd>WF_Huang</dd>
             <dt>修改日期：</dt>
-            <dd>2016年8月12日 (星期五) 12:53</dd>
+            <dd>2018年11月20日 (星期二) 10:30</dd>
             <dt></dt>
             <dd class="pull-right">
                 <span class="label label-success">按钮</span>
-                <span class="label label-warning">表单</span>
-                <span class="label label-info">W3C</span>
-                <span class="label label-danger">235</span></dd>
-            </dl>
-        <h1>模块名称</h1>
-        <section class="abstract">
-            <p><strong>摘要：</strong> 内容的说明</p>
-        </section>
+                <span class="label label-warning">布局</span>
+        </dl>
+        <h1 style="font-size: 24px;">按钮</h1>
     </header>
-    <section class="content">
-
-        <div class="panel">
-            <div class="panel-heading">
-                显示效果
-            </div>
-            <div class="panel-body">
-                <!--写显示内容-->
-
-
-            </div>
-        </div>
-
-        <div class="panel">
-            <div class="panel-heading">
-                HTML 代码
-            </div>
-            <div class="panel-body">
-                <!--html代码-->
-                <xmp>
-
-                </xmp>
-            </div>
-        </div>
-
-
-        <div class="panel">
-            <div class="panel-heading">
-                CSS 代码
-            </div>
-            <div class="panel-body">
-                <!--css代码-->
-                <xmp>
-
-                </xmp>
-            </div>
-        </div>
-
-    </section>
-    <footer>
-        <p class="pull-right text-muted">本库用于广远所属项目。</p>
-        <p class="text-important">如有疑问请联系<a href="https://github.com/862821165">@H_wf</a>  /  <a href="https://github.com/Lh0501">@Lh</a></p>
-    </footer>
 </article>
+
+
+<div id="page" class="">
+    <div id="pageBody" class="scrollbar-hover">
+        <div class="loader" id="pageLoader"><i class="icon icon-spin icon-spinner-indicator"></i> <span
+                class="loading-text">加载中...</span><span
+                class="error-text">加载失败，请检查网络重试。<br>另一个导致无法加载文档的原因可能是该文档尚未完成。<br>欢迎你在 <a
+                href="https://github.com/easysoft/zui">Github</a> 上 <a
+                href="https://github.com/easysoft/zui/fork">Fork</a> 项目来完善文档。</span></div>
+        <div class="container">
+            <div id="pageContent">
+
+                <article>
+                    <p>提供日常项目中遇到的所有按钮。</p>
+                </article>
+
+                <section>
+                    <header><h3>基本按钮</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <button type="button" class="btn_common">普通按钮</button>
+                            <button type="button" class="btn_arc">弧角按钮</button>
+                            <button type="button" class="btn_left_arc">左弧按钮</button>
+                            <button type="button" class="btn_right_arc">右弧按钮</button>
+                            <button type="button" class="btn_round">圆角按钮</button>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+
+    .btn_common{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+    }
+    .btn_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-radius: 5px;
+    }
+    .btn_left_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+    }
+    .btn_right_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    .btn_round{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-radius: 50px;
+    }
+
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+
+                <section>
+                    <header><h3>自适应宽度按钮</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <button type="button" class="btn_w_common">普通按钮</button>
+                            <button type="button" class="btn_w_arc">弧角按钮</button>
+                            <button type="button" class="btn_w_left_arc">左弧按钮</button>
+                            <button type="button" class="btn_w_right_arc">右弧按钮</button>
+                            <button type="button" class="btn_w_round">圆角按钮</button>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+
+    .btn_w_common{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+    .btn_w_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-radius: 5px;
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+    .btn_w_left_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+    .btn_w_right_arc{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+    .btn_w_round{
+      border: 0;
+      padding: 10px 20px;
+      color: #333333;
+      border-radius: 50px;
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+    }
+
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>
