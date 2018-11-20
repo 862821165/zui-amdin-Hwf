@@ -31,11 +31,199 @@
     <!--使用IE兼容模式渲染-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
     <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../style/dist/zui@1.8.1/css/zui.min.css">
+    <link rel="stylesheet" href="../style/h-admin.css">
+
+    <link rel="stylesheet" href="css/initialize.css">
 
 
 </head>
 <body>
 
+
+<article class="article" style="padding: 10px;background-color: #e5e5e5;">
+    <header>
+        <dl class="dl-inline pull-right">
+            <dt>修改人：</dt>
+            <dd>WF_Huang</dd>
+            <dt>修改日期：</dt>
+            <dd>2018年11月20日 (星期二) 10:30</dd>
+            <dt></dt>
+            <dd class="pull-right">
+                <span class="label label-success">按钮</span>
+                <span class="label label-warning">布局</span>
+            </dl>
+        <h1 style="font-size: 24px;">按钮</h1>
+    </header>
+</article>
+
+
+<div id="page" class="">
+    <div id="pageBody" class="scrollbar-hover">
+        <div class="container">
+            <div id="pageContent">
+
+                <article>
+                    <p>提供日常项目中遇到的所有按钮,一般按钮都没有设置颜色可自行添加。</p>
+                </article>
+
+                <section>
+                    <header><h3>基本按钮</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <button type="button" class="btn_common">普通按钮</button>
+                            <button type="button" class="btn_arc">弧角按钮</button>
+                            <button type="button" class="btn_round">圆角按钮</button>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .btn_common { border: 0; padding: 10px 20px; color: #ffffff; background-color: #FF6666; }
+
+    .btn_arc { border: 0; padding: 10px 20px; color: #ffffff; background-color: #FF6666;border-radius: 5px; }
+
+    .btn_round { border: 0; padding: 10px 20px; color: #ffffff; background-color: #FF6666; border-radius: 50px; }
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+
+                <section>
+                    <header><h3>自适应宽度按钮</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <button type="button" class="btn_w_common">普通按钮</button>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .btn_w_common { border: 0; padding: 10px 20px; color: #ffffff; background-color: #FF6666; display: block; width: 100%; margin: 5px 0; }
+
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+
+                <section>
+                    <header><h3>边线按钮</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <button type="button" class="btn_solid_common">边线按钮</button>
+                            <button type="button" class="btn_dashed_common">虚线按钮</button>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .btn_solid_common { border: 1px solid #FF6666; padding: 10px 20px; color: #FF6666; background-color: transparent; }
+
+    .btn_dashed_common { border: 1px dashed #FF6666; padding: 10px 20px; color: #FF6666; background-color: transparent; }
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+
+                <section>
+                    <header><h3>动态效果按钮</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <button type="button" class="btn_grow">悬停放大</button>
+                            <button type="button" class="btn_shrink">悬停缩小</button>
+                            <button type="button" class="btn_pop">放大后缩小</button>
+                            <button type="button" class="btn_bob">悬停浮动</button>
+                            <button type="button" class="btn_buzz">悬停震动</button>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+
+    .btn_grow { border: 1px solid #FF6666; padding: 10px 20px; color: #FF6666; background-color: transparent; display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-property: transform; transition-property: transform; }
+    .btn_grow:hover, .btn_grow:focus, .btn_grow:active { -webkit-transform: scale(1.1); transform: scale(1.1); }
+
+    .btn_shrink { border: 1px solid #FF6666; padding: 10px 20px; color: #FF6666; background-color: transparent; display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); -webkit-transition-duration: 0.3s; transition-duration: 0.3s; -webkit-transition-property: transform; transition-property: transform; }
+    .btn_shrink:hover, .btn_shrink:focus, .btn_shrink:active { -webkit-transform: scale(0.9); transform: scale(0.9); }
+
+    @-webkit-keyframes btn_pop { 50% { -webkit-transform: scale(1.2); transform: scale(1.2); } }
+    @keyframes btn_pop { 50% { -webkit-transform: scale(1.2); transform: scale(1.2); } }
+    .btn_pop { border: 1px solid #FF6666; padding: 10px 20px; color: #FF6666; background-color: transparent; display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); }
+    .btn_pop:hover, .btn_pop:focus, .btn_pop:active { -webkit-animation-name: btn_pop; animation-name: btn_pop; -webkit-animation-duration: 0.3s; animation-duration: 0.3s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; }
+
+    @-webkit-keyframes btn_bob { 0% { -webkit-transform: translateY(-8px); transform: translateY(-8px); }
+      50% { -webkit-transform: translateY(-4px); transform: translateY(-4px); }
+      100% { -webkit-transform: translateY(-8px); transform: translateY(-8px); } }
+    @keyframes btn_bob { 0% { -webkit-transform: translateY(-8px); transform: translateY(-8px); }
+      50% { -webkit-transform: translateY(-4px); transform: translateY(-4px); }
+      100% { -webkit-transform: translateY(-8px); transform: translateY(-8px); } }
+    @-webkit-keyframes btn_bob-float { 100% { -webkit-transform: translateY(-8px); transform: translateY(-8px); } }
+    @keyframes btn_bob-float { 100% { -webkit-transform: translateY(-8px); transform: translateY(-8px); } }
+    .btn_bob { border: 1px solid #FF6666; padding: 10px 20px; color: #FF6666; background-color: transparent; display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); }
+    .btn_bob:hover, .btn_bob:focus, .btn_bob:active { -webkit-animation-name: btn_bob-float, btn_bob; animation-name: btn_bob-float, btn_bob; -webkit-animation-duration: .3s, 1.5s; animation-duration: .3s, 1.5s; -webkit-animation-delay: 0s, .3s; animation-delay: 0s, .3s; -webkit-animation-timing-function: ease-out, ease-in-out; animation-timing-function: ease-out, ease-in-out; -webkit-animation-iteration-count: 1, infinite; animation-iteration-count: 1, infinite; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; -webkit-animation-direction: normal, alternate; animation-direction: normal, alternate; }
+
+    @-webkit-keyframes btn_buzz { 10% { -webkit-transform: translateX(3px) rotate(2deg); transform: translateX(3px) rotate(2deg); }
+      20% { -webkit-transform: translateX(-3px) rotate(-2deg); transform: translateX(-3px) rotate(-2deg); }
+      30% { -webkit-transform: translateX(3px) rotate(2deg); transform: translateX(3px) rotate(2deg); }
+      40% { -webkit-transform: translateX(-3px) rotate(-2deg); transform: translateX(-3px) rotate(-2deg); }
+      50% { -webkit-transform: translateX(2px) rotate(1deg); transform: translateX(2px) rotate(1deg); }
+      60% { -webkit-transform: translateX(-2px) rotate(-1deg); transform: translateX(-2px) rotate(-1deg); }
+      70% { -webkit-transform: translateX(2px) rotate(1deg); transform: translateX(2px) rotate(1deg); }
+      80% { -webkit-transform: translateX(-2px) rotate(-1deg); transform: translateX(-2px) rotate(-1deg); }
+      90% { -webkit-transform: translateX(1px) rotate(0); transform: translateX(1px) rotate(0); }
+      100% { -webkit-transform: translateX(-1px) rotate(0); transform: translateX(-1px) rotate(0); } }
+    @keyframes btn_buzz { 10% { -webkit-transform: translateX(3px) rotate(2deg); transform: translateX(3px) rotate(2deg); }
+      20% { -webkit-transform: translateX(-3px) rotate(-2deg); transform: translateX(-3px) rotate(-2deg); }
+      30% { -webkit-transform: translateX(3px) rotate(2deg); transform: translateX(3px) rotate(2deg); }
+      40% { -webkit-transform: translateX(-3px) rotate(-2deg); transform: translateX(-3px) rotate(-2deg); }
+      50% { -webkit-transform: translateX(2px) rotate(1deg); transform: translateX(2px) rotate(1deg); }
+      60% { -webkit-transform: translateX(-2px) rotate(-1deg); transform: translateX(-2px) rotate(-1deg); }
+      70% { -webkit-transform: translateX(2px) rotate(1deg); transform: translateX(2px) rotate(1deg); }
+      80% { -webkit-transform: translateX(-2px) rotate(-1deg); transform: translateX(-2px) rotate(-1deg); }
+      90% { -webkit-transform: translateX(1px) rotate(0); transform: translateX(1px) rotate(0); }
+      100% { -webkit-transform: translateX(-1px) rotate(0); transform: translateX(-1px) rotate(0); } }
+    .btn_buzz { border: 1px solid #FF6666; padding: 10px 20px; color: #FF6666; background-color: transparent; display: inline-block; vertical-align: middle; -webkit-transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); }
+    .btn_buzz:hover, .btn_buzz:focus, .btn_buzz:active { -webkit-animation-name: btn_buzz; animation-name: btn_buzz; -webkit-animation-duration: 0.75s; animation-duration: 0.75s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; }
+
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+
+                <section>
+                    <header><h3>带提示按钮</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <button type="button" class="btn_point">带数组按钮 <span>2</span></button>
+                            <button type="button" class="btn_w_point">带数组按钮 <span>6</span></button>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .btn_point { border: 0; padding: 10px 20px; color: #ffffff; background-color: #FF6666; position: relative; }
+    .btn_point span { position: absolute; background-color: #ffffff; border: 1px solid #FF6666; width: 20px; height: 20px; border-radius: 20px; font-size: 12px; color: #FF6666; top: -10px; right: -10px; }
+
+    .btn_w_point { border: 1px solid #FF6666; padding: 10px 20px; color: #FF6666; background-color: transparent; position: relative; }
+    .btn_w_point span { position: absolute; background-color: #FF6666; width: 20px; height: 20px; border-radius: 20px; font-size: 12px; color: #ffffff; top: -10px; right: -10px; }
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 </body>
