@@ -35,7 +35,7 @@
 .main_body .main_nav_left .nav-mini.nav .nav-item:hover .nav-item a { color: #fff; }
 .main_body .main_nav_left .nav-mini.nav .nav-item:hover a:before { opacity: 1; }
 .main_body .main_nav_left .nav-mini.nav .nav-item:hover ul { display: block; }
-.main_body .main_contain { position: absolute; left: 200px; top: 2px; bottom: 0; right: 310px; }
+.main_body .main_contain { position: absolute; left: 200px; top: 2px; bottom: 0; right: 310px; padding-top: 10px; padding-right: 10px; }
 .main_body .main_right { position: absolute; right: 0px; top: 3px; bottom: 0px; width: 300px; box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); }
 .main_body .main_right .shouqi_btn { position: absolute; top: 0; bottom: 0; transform: rotate(180deg); color: #000; vertical-align: middle; text-align: center; width: 31px; left: -31px; background-color: #F0F3F7; }
 .main_body .main_right .shouqi_btn i { vertical-align: middle; position: absolute; top: 50%; left: 4px; }
@@ -82,5 +82,8 @@
 .img_tab_list .item_tab .tab_body .btn_my { color: #ffffff; background-color: #4787BF; }
 .img_tab_list .item_tab .tab_body .title_text { line-height: 35px; margin: 0; }
 .img_tab_list .item_tab .tab_body .title_text i { font-size: 14px; margin-left: 5px; }
+
+/*修改显示*/
+xmp { margin: -15px; }
 
 /*# sourceMappingURL=h-admin.css.map */
