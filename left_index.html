@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--**
+ *
+ *----------Created by 黄伟峰 on 2018/11/20.----------
+ * 　　　┏┓　　　┏┓
+ * 　　┏┛┻━━━┛┻┓
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　━　　　┃
+ * 　　┃　┳┛　┗┳　┃
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　┻　　　┃
+ * 　　┃　　　　　　　┃
+ * 　　┗━┓　　　┏━┛
+ * 　　　　┃　　　┃神兽保佑
+ * 　　　　┃　　　┃代码无BUG！
+ * 　　　　┃　　　┗━━━┓
+ * 　　　　┃　　　　　　　┣┓
+ * 　　　　┃　　　　　　　┏┛
+ * 　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　┃┫┫　┃┫┫
+ * 　　　　　┗┻┛　┗┻┛
+ * ━━━━━━神兽出没━━━━━━by:web_hwf@sina.com
+ *-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--响应式约束-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1 user-scalable=no"/>
+    <!--使用IE兼容模式渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="style/dist/zui@1.8.1/css/zui.min.css">
+    <link rel="stylesheet" href="style/dist/zui@1.8.1/css/zui-theme.css">
+    <link rel="stylesheet" href="style/dist/hover.css">
+    <link rel="stylesheet" href="style/dist/animate.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_626490_2smdpt7a4mk.css">
+    <link href="style/dist/zui@1.8.1/lib/dashboard/zui.dashboard.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/h-admin.css">
+
+</head>
+<body>
+<section style="padding:10px 25px 10px 10px">
+    <div id="dashboard" class="dashboard dashboard-draggable" data-height="300">
+        <section class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="panel" data-id="1">
+                    <div class="panel-heading">
+                        <i class="icon icon-list"></i>
+                        <span class="title">面板标题</span>
+                    </div>
+                    <div class="panel-body">
+                        <p>面板内容。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="panel" data-id="2">
+                    <div class="panel-heading">
+                        <i class="icon icon-list"></i>
+                        <span class="title">包含列表组</span>
+                    </div>
+                    <div class="panel-body no-padding">
+                        <div class="list-group">
+                            ...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="panel" data-id="3">
+                    <div class="panel-heading">
+                        <i class="icon icon-table"></i>
+                        <span class="title">包含表格</span>
+                    </div>
+                    <div class="panel-body no-padding">
+                        <table class="table">
+                            ...
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel" data-id="4">
+                    <div class="panel-heading">
+                        <i class="icon icon-bolt"></i>
+                        <span class="title">包含操作按钮</span>
+                        <div class="panel-actions">
+                            <a href="###" data-toggle="tooltip" title="编辑"><i class="icon-pencil"></i></a>
+                            <button type="button" class="btn" data-toggle="tooltip" title="收藏"><i class="icon-heart-empty"></i></button>
+                            <div class="dropdown" data-toggle="tooltip" title="更多操作">
+                                <button class="btn" data-toggle="dropdown" type="button"><i class="icon icon-ellipsis-v"></i></button>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="###"><i class="icon icon-ok"></i> 确认</a></li>
+                                    <li><a href="###"><i class="icon icon-thumbs-o-up"></i> 自定义操作</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <p>在面板头部（<code>.panel-heading</code>）包含链接和按钮来自定义操作。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel" data-id="5" data-url="docs/partial/remote-panel.html">
+                    <div class="panel-heading">
+                        <i class="icon icon-globe"></i>
+                        <span class="title">加载远程内容</span>
+                        <div class="panel-actions">
+                            <button type="button" class="btn refresh-panel" data-toggle="tooltip" title="重新从远程获取内容"><i class="icon-refresh"></i></button>
+                        </div>
+                    </div>
+                    <div class="panel-body">等待加载远程内容。</div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</section>
+
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="style/dist/zui@1.8.1/js/zui.min.js"></script>
+<script src="style/dist/zui@1.8.1/lib/dashboard/zui.dashboard.min.js"></script>
+
+<script>
+    $('#dashboard').dashboard({draggable: true});
+</script>
+</body>
+</html>

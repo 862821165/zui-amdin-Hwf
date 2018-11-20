@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--**
+ *
+ *----------Created by 黄伟峰 on 2018/11/20.----------
+ * 　　　┏┓　　　┏┓
+ * 　　┏┛┻━━━┛┻┓
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　━　　　┃
+ * 　　┃　┳┛　┗┳　┃
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　┻　　　┃
+ * 　　┃　　　　　　　┃
+ * 　　┗━┓　　　┏━┛
+ * 　　　　┃　　　┃神兽保佑
+ * 　　　　┃　　　┃代码无BUG！
+ * 　　　　┃　　　┗━━━┓
+ * 　　　　┃　　　　　　　┣┓
+ * 　　　　┃　　　　　　　┏┛
+ * 　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　┃┫┫　┃┫┫
+ * 　　　　　┗┻┛　┗┻┛
+ * ━━━━━━神兽出没━━━━━━by:web_hwf@sina.com
+ *-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--响应式约束-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1 user-scalable=no"/>
+    <!--使用IE兼容模式渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="style/dist/zui@1.8.1/css/zui.min.css">
+    <link rel="stylesheet" href="style/dist/zui@1.8.1/css/zui-theme.css">
+    <link rel="stylesheet" href="style/dist/hover.css">
+    <link rel="stylesheet" href="style/dist/animate.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_626490_2smdpt7a4mk.css">
+    <link href="style/dist/zui@1.8.1/lib/board/zui.board.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/h-admin.css">
+
+
+    <style>
+        .board-item.drag-shadow {z-index: 9999}
+        .board {
+            width: 100%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 使用 .boards 类来管理多个 .board -->
+<div class="boards" id="myBoards" style="    padding: 10px;">
+    <!-- .board 为单个容器 -->
+    <div class="board panel">
+        <div class="panel-heading">
+            <strong>未完成</strong>
+        </div>
+        <div class="panel-body">
+            <div class="board-list">
+                <!-- 使用 .board-item 来标识可以操作的条目 -->
+                <div class="board-item">测试</div>
+                <div class="board-item">发布</div>
+                <div class="board-item">庆祝</div>
+                <!-- 为 .board-item 添加 .disabled-dorp 类来禁止移动此条目 -->
+                <div class="disable-drop board-item">不可拖拽</div>
+            </div>
+        </div>
+    </div>
+    <div class="board panel">
+        <div class="panel-heading">
+            <strong>进行中</strong>
+        </div>
+        <div class="panel-body">
+            <div class="board-list">
+                <div class="board-item">设计界面</div>
+                <div class="board-item">撰写文档</div>
+                <div class="board-item">紧急的任务</div>
+            </div>
+        </div>
+    </div>
+    <div class="board panel">
+        <div class="panel-heading">
+            <strong>已完成</strong>
+        </div>
+        <div class="panel-body">
+            <div class="board-list">
+                <div class="board-item">初步设计</div>
+                <div class="board-item">数据库设计</div>
+                <div class="board-item">需求整理</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="style/dist/zui@1.8.1/js/zui.min.js"></script>
+<script src="style/dist/zui@1.8.1/lib/board/zui.board.min.js"></script>
+
+<script>
+    $('#myBoards').boards({
+        drop: function(e){
+            $.zui.messager.show(e.element.text() + " 拖放到 " + e.target.closest('.board').find('.panel-heading').text());
+        }
+    });
+</script>
+</body>
+</html>
