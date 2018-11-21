@@ -94,4 +94,29 @@
 .input_img img { height: 150px; }
 .input_img input[type="file"] { position: absolute; width: 100%; bottom: 0; top: 0; left: 0; right: 0; z-index: 2; opacity: 0; cursor: pointer; }
 
+.input_tree { position: relative; }
+.input_tree:hover .ul_tree { display: block; }
+.input_tree .input_common { border: 1px solid #e5e5e5; padding: 8px; color: #333333; width: 100%; }
+.input_tree .ul_tree { display: none; position: absolute; top: 35px; left: 0; right: 0; z-index: 99; /* ruler */ }
+.input_tree .ul_tree input.radio { margin: 0 2px 0 8px; }
+.input_tree .ul_tree input.radio.first { margin-left: 0; }
+.input_tree .ul_tree input.empty { color: lightgray; }
+.input_tree .ul_tree code { color: #2f332a; }
+.input_tree .ul_tree .highlight_red { color: #A60000; }
+.input_tree .ul_tree .highlight_green { color: #A7F43D; }
+.input_tree .ul_tree li { list-style: none; font-size: 12px; }
+.input_tree .ul_tree li.title { list-style: none; }
+.input_tree .ul_tree ul.list { margin-left: 17px; }
+.input_tree .ul_tree div.content_wrap { width: 600px; height: 380px; }
+.input_tree .ul_tree div.content_wrap div.left { float: left; width: 250px; }
+.input_tree .ul_tree div.content_wrap div.right { float: right; width: 340px; }
+.input_tree .ul_tree div.zTreeDemoBackground { width: 250px; height: 362px; text-align: left; }
+.input_tree .ul_tree ul.ztree { border: 1px solid #e5e5e5; background: #ffffff; width: 100%; height: 360px; overflow-y: scroll; overflow-x: auto; }
+.input_tree .ul_tree ul.log { border: 1px solid #e5e5e5; background: #ffffff; width: 300px; height: 170px; overflow: hidden; }
+.input_tree .ul_tree ul.log.small { height: 45px; }
+.input_tree .ul_tree ul.log li { color: #666666; list-style: none; padding-left: 10px; }
+.input_tree .ul_tree ul.log li.dark { background-color: #E3E3E3; }
+.input_tree .ul_tree div.ruler { height: 20px; width: 220px; background-color: #ffffff; border: 1px solid #333; margin-bottom: 5px; cursor: pointer; }
+.input_tree .ul_tree div.ruler div.cursor { height: 20px; width: 30px; background-color: #3C6E31; color: white; text-align: right; padding-right: 5px; cursor: pointer; }
+
 /*# sourceMappingURL=index.css.map */

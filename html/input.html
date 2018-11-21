@@ -24,7 +24,7 @@
  *-->
 <head>
     <meta charset="UTF-8">
-    <title>按钮</title>
+    <title>输入框组件</title>
 
     <!--响应式约束-->
     <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1 user-scalable=no"/>
@@ -33,6 +33,9 @@
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" href="../style/dist/zui@1.8.1/css/zui.min.css">
     <link rel="stylesheet" href="../style/h-admin.css">
+
+    <!--zTree 控件的-->
+    <link rel="stylesheet" href="../lib/zTree/css/zTreeStyle.css">
 
     <link rel="stylesheet" href="css/initialize.css">
 
@@ -224,23 +227,80 @@
                     <article>
                         <div class="example">
                             <!--HTML 代码-->
-                            <div class="input_img">
-                                <img id="up_img" src="images/up_img.png" alt="">
-                                <input id="imgInput" type="file" class="upload-input-file">
+                            <div class="input_tree" style="width: 250px">
+                                <input type="text" class="input_common">
+                                <div class="ul_tree">
+                                    <ul id="treeDemo" class="ztree"></ul>
+                                </div>
                             </div>
                         </div>
 
                         <pre class="prettyprint prettyprinted">
                              <code class="lang-css">
                               <!--css 代码-->
-
+    .input_tree { position: relative; }
+    .input_tree .input_common { border: 1px solid #e5e5e5; padding: 8px; color: #333333; width: 100%; }
+    .input_tree .ul_tree { position: absolute; top: 35px; left: 0; right: 0; z-index: 99; /* ruler */ }
+    .input_tree .ul_tree input.radio { margin: 0 2px 0 8px; }
+    .input_tree .ul_tree input.radio.first { margin-left: 0; }
+    .input_tree .ul_tree input.empty { color: lightgray; }
+    .input_tree .ul_tree code { color: #2f332a; }
+    .input_tree .ul_tree .highlight_red { color: #A60000; }
+    .input_tree .ul_tree .highlight_green { color: #A7F43D; }
+    .input_tree .ul_tree li { list-style: none; font-size: 12px; }
+    .input_tree .ul_tree li.title { list-style: none; }
+    .input_tree .ul_tree ul.list { margin-left: 17px; }
+    .input_tree .ul_tree div.content_wrap { width: 600px; height: 380px; }
+    .input_tree .ul_tree div.content_wrap div.left { float: left; width: 250px; }
+    .input_tree .ul_tree div.content_wrap div.right { float: right; width: 340px; }
+    .input_tree .ul_tree div.zTreeDemoBackground { width: 250px; height: 362px; text-align: left; }
+    .input_tree .ul_tree ul.ztree { border: 1px solid #e5e5e5; background: #ffffff; width: 100%; height: 360px; overflow-y: scroll; overflow-x: auto; }
+    .input_tree .ul_tree ul.log { border: 1px solid #e5e5e5; background: #ffffff; width: 300px; height: 170px; overflow: hidden; }
+    .input_tree .ul_tree ul.log.small { height: 45px; }
+    .input_tree .ul_tree ul.log li { color: #666666; list-style: none; padding-left: 10px; }
+    .input_tree .ul_tree ul.log li.dark { background-color: #E3E3E3; }
+    .input_tree .ul_tree div.ruler { height: 20px; width: 220px; background-color: #ffffff; border: 1px solid #333; margin-bottom: 5px; cursor: pointer; }
+    .input_tree .ul_tree div.ruler div.cursor { height: 20px; width: 30px; background-color: #3C6E31; color: white; text-align: right; padding-right: 5px; cursor: pointer; }
                              </code>
                         </pre>
                         <pre class="prettyprint prettyprinted">
                              <code class="lang-js">
                               <!--js 代码-->
+    var setting = {
+        view: {
+            showIcon: false
+        },
+        async: {
+            enable: true,
+            url:"../asyncData/getNodes.php",//请求的接口
+            autoParam:["id", "name=n", "level=lv"],
+            otherParam:{"otherParam":"zTreeAsyncTest"},
+            dataFilter: filter
+        }
+    };
+
+    function filter(treeId, parentNode, childNodes) {
+        if (!childNodes) return null;
+        for (var i=0; i < childNodes.length; i++) {
+            childNodes[i].name = childNodes[i].name.replace(/\.n/g, '.');
+        }
+        return childNodes;
+    }
+
+    $(document).ready(function(){
+        $.fn.zTree.init($("#treeDemo"), setting);
+    });
+                                 
+    $('#treeDemo').on('click','a',function () {
+        $(this).parents('.ul_tree').prev('input').val($(this).find('.node_name').text());
+    })
                              </code>
                         </pre>
+
+                        <div class="alert alert-warning">
+                            <h4>需要的组件</h4>
+                            <p>插件需要zTree 的一些文件js文件需要引用<code>jquery.ztree.core.min.js</code>,css文件需要引用<code>zTreeStyle.css</code>。查看此效果需要用phpStorm预览。</p>
+                        </div>
                     </article>
                 </section>
             </div>
@@ -249,6 +309,7 @@
 </div>
 
 <script src="js/jquery-2.1.4.min.js"></script>
+<script src="../lib/zTree/js/jquery.ztree.core.min.js"></script>
 <script>
     $(function () {
         $(".num_add").click(function(){
@@ -283,6 +344,37 @@
         $("#imgInput").change(function(){
             $("#up_img").attr("src",URL.createObjectURL($(this)[0].files[0]));
         });
+
+
+
+        var setting = {
+            view: {
+                showIcon: false
+            },
+            async: {
+                enable: true,
+                url:"../asyncData/getNodes.php",
+                autoParam:["id", "name=n", "level=lv"],
+                otherParam:{"otherParam":"zTreeAsyncTest"},
+                dataFilter: filter
+            }
+        };
+
+        function filter(treeId, parentNode, childNodes) {
+            if (!childNodes) return null;
+            for (var i=0, l=childNodes.length; i<l; i++) {
+                childNodes[i].name = childNodes[i].name.replace(/\.n/g, '.');
+            }
+            return childNodes;
+        }
+
+        $(document).ready(function(){
+            $.fn.zTree.init($("#treeDemo"), setting);
+        });
+
+        $('#treeDemo').on('click','a',function () {
+            $(this).parents('.ul_tree').prev('input').val($(this).find('.node_name').text());
+        })
 
     })
 </script>
