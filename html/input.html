@@ -290,7 +290,7 @@
     $(document).ready(function(){
         $.fn.zTree.init($("#treeDemo"), setting);
     });
-                                 
+
     $('#treeDemo').on('click','a',function () {
         $(this).parents('.ul_tree').prev('input').val($(this).find('.node_name').text());
     })
@@ -299,7 +299,9 @@
 
                         <div class="alert alert-warning">
                             <h4>需要的组件</h4>
-                            <p>插件需要zTree 的一些文件js文件需要引用<code>jquery.ztree.core.min.js</code>,css文件需要引用<code>zTreeStyle.css</code>。查看此效果需要用phpStorm预览。</p>
+                            <p>插件需要zTree 的一些文件js文件需要引用
+                                <a href="../lib/zTree/js/jquery.ztree.core.min.js" download="jquery.ztree.core.min.js">jquery.ztree.core.min.js</a>,
+                                css文件需要引用<a href="../lib/zTree/css/zTreeStyle.css"  download="zTreeStyle.css">zTreeStyle.css</a>。查看此效果需要用phpStorm预览。</p>
                         </div>
                     </article>
                 </section>
