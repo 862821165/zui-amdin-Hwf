@@ -35,11 +35,11 @@ $(function () {
             $('.nav-item').children('ul').removeAttr('style');
             $('.nav').addClass('nav-mini');
             $('.bg_scellc').css('background-color','#F1F1F1') ;
-            $('.main_contain').animate({left:'70px'}) ;
+            $('.main_contain').animate({left:'60px'}) ;
         } else {
             $('.nav').removeClass('nav-mini');
-            $('.bg_scellc').css('background-color','#263238') ;
-            $('.main_contain').animate({left:'220px'}) ;
+            $('.bg_scellc').css('background-color','#F1F1F1') ;
+            $('.main_contain').animate({left:'200px'}) ;
         }
     });
 
