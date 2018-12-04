@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--**
+ *
+ *----------Created by 黄伟峰 on 2018/11/20.----------
+ * 　　　┏┓　　　┏┓
+ * 　　┏┛┻━━━┛┻┓
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　━　　　┃
+ * 　　┃　┳┛　┗┳　┃
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　┻　　　┃
+ * 　　┃　　　　　　　┃
+ * 　　┗━┓　　　┏━┛
+ * 　　　　┃　　　┃神兽保佑
+ * 　　　　┃　　　┃代码无BUG！
+ * 　　　　┃　　　┗━━━┓
+ * 　　　　┃　　　　　　　┣┓
+ * 　　　　┃　　　　　　　┏┛
+ * 　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　┃┫┫　┃┫┫
+ * 　　　　　┗┻┛　┗┻┛
+ * ━━━━━━神兽出没━━━━━━by:web_hwf@sina.com
+ *-->
+<head>
+    <meta charset="UTF-8">
+    <title>块状内容</title>
+
+    <!--响应式约束-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1 user-scalable=no"/>
+    <!--使用IE兼容模式渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../style/dist/zui@1.8.1/css/zui.min.css">
+    <link rel="stylesheet" href="../style/h-admin.css">
+
+    <link rel="stylesheet" href="css/initialize.css">
+
+
+</head>
+<body>
+
+
+<article class="article" style="padding: 10px;background-color: #e5e5e5;">
+    <header>
+        <dl class="dl-inline pull-right">
+            <dt>修改人：</dt>
+            <dd>WF_Huang</dd>
+            <dt>修改日期：</dt>
+            <dd>2018年12月04日 (星期二) 11:30</dd>
+            <dt></dt>
+            <dd class="pull-right">
+                <span class="label label-success">模块内容</span>
+                <span class="label label-warning">等分</span>
+            </dl>
+        <h1 style="font-size: 24px;">块状内容</h1>
+    </header>
+</article>
+
+
+<div id="page" class="">
+    <div id="pageBody" class="scrollbar-hover">
+        <div class="container">
+            <div id="pageContent">
+
+                <article>
+                    <p>块状内容，这里取名页不知道叫啥，内容就是一些等分常用的快。</p>
+                </article>
+
+                <section>
+                    <header><h3>文字模块</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <section class="module_common">
+                                <div class="tab_item">
+                                    <p>符合资格的员工</p>
+                                    <strong>29542</strong>
+                                </div>
+                                <div class="tab_item">
+                                    <p>符合资格的员工</p>
+                                    <strong>29542</strong>
+                                </div>
+                                <div class="tab_item">
+                                    <p>符合资格的员工</p>
+                                    <strong>29542</strong>
+                                </div>
+                                <div class="tab_item">
+                                    <p>符合资格的员工</p>
+                                    <strong>29542</strong>
+                                </div>
+                            </section>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .module_common { display: flex; margin: 20px 0; text-align: center; }
+    .module_common .tab_item { flex: 1; }
+    .module_common .tab_item p { font-size: 16px; color: #999999; }
+    .module_common .tab_item strong { font-size: 40px; color: #339933; }
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+                <section>
+                    <header><h3>列表模块</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <section class="module_tab_common">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="tab_item">
+                                            <h3> 梁健敏   <span>已发放</span></h3>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">报&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;读:</div>
+                                                <div class="right_text h_text_sl_2"> 国家开放大学（广州）实验学院</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">学习状态:</div>
+                                                <div class="right_text h_text_sl_2"> 已入学，未毕业</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">就读时长:</div>
+                                                <div class="right_text h_text_sl_2"> 458天</div>
+                                            </div>
+                                            <hr style="margin: 5px 0;">
+                                            <div class="p_text_dl">
+                                                <div class="left_text">补&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贴:</div>
+                                                <div class="right_text h_text_sl_2 strong_danger"> ￥1000.00</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">审批工会：</div>
+                                                <div class="right_text h_text_sl_2">越秀区总工会</div>
+                                            </div>
+
+                                            <div class="btn_list">
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="tab_item">
+                                            <h3> 梁健敏   <span>已发放</span></h3>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">报&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;读:</div>
+                                                <div class="right_text h_text_sl_2"> 国家开放大学（广州）实验学院</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">学习状态:</div>
+                                                <div class="right_text h_text_sl_2"> 已入学，未毕业</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">就读时长:</div>
+                                                <div class="right_text h_text_sl_2"> 458天</div>
+                                            </div>
+                                            <hr style="margin: 5px 0;">
+                                            <div class="p_text_dl">
+                                                <div class="left_text">补&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贴:</div>
+                                                <div class="right_text h_text_sl_2 strong_danger"> ￥1000.00</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">审批工会：</div>
+                                                <div class="right_text h_text_sl_2">越秀区总工会</div>
+                                            </div>
+
+                                            <div class="btn_list">
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="tab_item">
+                                            <h3> 梁健敏   <span>已发放</span></h3>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">报&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;读:</div>
+                                                <div class="right_text h_text_sl_2"> 国家开放大学（广州）实验学院</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">学习状态:</div>
+                                                <div class="right_text h_text_sl_2"> 已入学，未毕业</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">就读时长:</div>
+                                                <div class="right_text h_text_sl_2"> 458天</div>
+                                            </div>
+                                            <hr style="margin: 5px 0;">
+                                            <div class="p_text_dl">
+                                                <div class="left_text">补&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贴:</div>
+                                                <div class="right_text h_text_sl_2 strong_danger"> ￥1000.00</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">审批工会：</div>
+                                                <div class="right_text h_text_sl_2">越秀区总工会</div>
+                                            </div>
+
+                                            <div class="btn_list">
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="tab_item">
+                                            <h3> 梁健敏   <span>已发放</span></h3>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">报&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;读:</div>
+                                                <div class="right_text h_text_sl_2"> 国家开放大学（广州）实验学院</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">学习状态:</div>
+                                                <div class="right_text h_text_sl_2"> 已入学，未毕业</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">就读时长:</div>
+                                                <div class="right_text h_text_sl_2"> 458天</div>
+                                            </div>
+                                            <hr style="margin: 5px 0;">
+                                            <div class="p_text_dl">
+                                                <div class="left_text">补&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贴:</div>
+                                                <div class="right_text h_text_sl_2 strong_danger"> ￥1000.00</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">审批工会：</div>
+                                                <div class="right_text h_text_sl_2">越秀区总工会</div>
+                                            </div>
+
+                                            <div class="btn_list">
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="tab_item">
+                                            <h3> 梁健敏   <span>已发放</span></h3>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">报&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;读:</div>
+                                                <div class="right_text h_text_sl_2"> 国家开放大学（广州）实验学院</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">学习状态:</div>
+                                                <div class="right_text h_text_sl_2"> 已入学，未毕业</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">就读时长:</div>
+                                                <div class="right_text h_text_sl_2"> 458天</div>
+                                            </div>
+                                            <hr style="margin: 5px 0;">
+                                            <div class="p_text_dl">
+                                                <div class="left_text">补&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贴:</div>
+                                                <div class="right_text h_text_sl_2 strong_danger"> ￥1000.00</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">审批工会：</div>
+                                                <div class="right_text h_text_sl_2">越秀区总工会</div>
+                                            </div>
+
+                                            <div class="btn_list">
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="tab_item">
+                                            <h3> 梁健敏   <span>已发放</span></h3>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">报&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;读:</div>
+                                                <div class="right_text h_text_sl_2"> 国家开放大学（广州）实验学院</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">学习状态:</div>
+                                                <div class="right_text h_text_sl_2"> 已入学，未毕业</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">就读时长:</div>
+                                                <div class="right_text h_text_sl_2"> 458天</div>
+                                            </div>
+                                            <hr style="margin: 5px 0;">
+                                            <div class="p_text_dl">
+                                                <div class="left_text">补&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贴:</div>
+                                                <div class="right_text h_text_sl_2 strong_danger"> ￥1000.00</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">审批工会：</div>
+                                                <div class="right_text h_text_sl_2">越秀区总工会</div>
+                                            </div>
+
+                                            <div class="btn_list">
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="tab_item">
+                                            <h3> 梁健敏   <span>已发放</span></h3>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">报&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;读:</div>
+                                                <div class="right_text h_text_sl_2"> 国家开放大学（广州）实验学院</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">学习状态:</div>
+                                                <div class="right_text h_text_sl_2"> 已入学，未毕业</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">就读时长:</div>
+                                                <div class="right_text h_text_sl_2"> 458天</div>
+                                            </div>
+                                            <hr style="margin: 5px 0;">
+                                            <div class="p_text_dl">
+                                                <div class="left_text">补&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贴:</div>
+                                                <div class="right_text h_text_sl_2 strong_danger"> ￥1000.00</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">审批工会：</div>
+                                                <div class="right_text h_text_sl_2">越秀区总工会</div>
+                                            </div>
+
+                                            <div class="btn_list">
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="tab_item">
+                                            <h3> 梁健敏   <span>已发放</span></h3>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">报&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;读:</div>
+                                                <div class="right_text h_text_sl_2"> 国家开放大学（广州）实验学院</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">学习状态:</div>
+                                                <div class="right_text h_text_sl_2"> 已入学，未毕业</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">就读时长:</div>
+                                                <div class="right_text h_text_sl_2"> 458天</div>
+                                            </div>
+                                            <hr style="margin: 5px 0;">
+                                            <div class="p_text_dl">
+                                                <div class="left_text">补&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贴:</div>
+                                                <div class="right_text h_text_sl_2 strong_danger"> ￥1000.00</div>
+                                            </div>
+                                            <div class="p_text_dl">
+                                                <div class="left_text">审批工会：</div>
+                                                <div class="right_text h_text_sl_2">越秀区总工会</div>
+                                            </div>
+
+                                            <div class="btn_list">
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                                <button type="button" class="btn_common">普通按钮</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .module_tab_common { margin-bottom: 20px; }
+    .module_tab_common .tab_item { border: 1px solid #e5e5e5; border-radius: 1px; padding: 15px; margin: 10px 0; display: block; }
+    .module_tab_common .tab_item h3 { font-size: 18px; line-height: 18px; margin-bottom: 15px; font-weight: bold; }
+    .module_tab_common .tab_item h3 span { font-weight: normal; font-size: 14px; color: #A6D5A6; float: right; }
+    .module_tab_common .btn_list { display: flex; margin: 10px -5px -5px; }
+    .module_tab_common .btn_list button { border: 0; flex: 1; width: 100%; padding: 5px 10px; color: #ffffff; }
+    .module_tab_common .btn_list button:nth-child(1) { background-color: #FF6666; }
+    .module_tab_common .btn_list button:nth-child(2) { background-color: #339933; }
+    .module_tab_common .btn_list button:nth-child(3) { background-color: #0a67fb; }
+    .module_tab_common .btn_list button:nth-child(4) { background-color: #FF9966; }
+    .module_tab_common .btn_list button:nth-child(5) { background-color: #0066CC; }
+    .module_tab_common .p_text_dl .left_text { width: 65px; display: inline-block; vertical-align: top; }
+    .module_tab_common .p_text_dl .right_text { width: calc(100% - 70px); display: inline-block; line-height: 20px; }
+    .module_tab_common .p_text_dl .strong_danger { color: #da2b28; font-weight: bold; }
+
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

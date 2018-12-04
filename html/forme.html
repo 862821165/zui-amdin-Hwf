@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--**
+ *
+ *----------Created by 黄伟峰 on 2018/11/20.----------
+ * 　　　┏┓　　　┏┓
+ * 　　┏┛┻━━━┛┻┓
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　━　　　┃
+ * 　　┃　┳┛　┗┳　┃
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　┻　　　┃
+ * 　　┃　　　　　　　┃
+ * 　　┗━┓　　　┏━┛
+ * 　　　　┃　　　┃神兽保佑
+ * 　　　　┃　　　┃代码无BUG！
+ * 　　　　┃　　　┗━━━┓
+ * 　　　　┃　　　　　　　┣┓
+ * 　　　　┃　　　　　　　┏┛
+ * 　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　┃┫┫　┃┫┫
+ * 　　　　　┗┻┛　┗┻┛
+ * ━━━━━━神兽出没━━━━━━by:web_hwf@sina.com
+ *-->
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+
+    <!--响应式约束-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1 user-scalable=no"/>
+    <!--使用IE兼容模式渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../style/dist/zui@1.8.1/css/zui.min.css">
+    <link rel="stylesheet" href="../style/h-admin.css">
+
+    <link rel="stylesheet" href="css/initialize.css">
+
+
+</head>
+<body>
+
+
+<article class="article" style="padding: 10px;background-color: #e5e5e5;">
+    <header>
+        <dl class="dl-inline pull-right">
+            <dt>修改人：</dt>
+            <dd>WF_Huang</dd>
+            <dt>修改日期：</dt>
+            <dd>2018年12月04日 (星期二) 13:30</dd>
+            <dt></dt>
+            <dd class="pull-right">
+                <span class="label label-success">表单</span>
+                <span class="label label-warning">组合</span>
+            </dl>
+        <h1 style="font-size: 24px;">表单</h1>
+    </header>
+</article>
+
+
+<div id="page" class="">
+    <div id="pageBody" class="scrollbar-hover">
+        <div class="container">
+            <div id="pageContent">
+
+                <article>
+                    <p>头部返回条，上头说要大气，于是就做的大气一点。</p>
+                </article>
+
+                <section>
+                    <header><h3>基本横向表单</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+
+                            <section class="form_h_common">
+                                <div class="button_nav">
+                                    <button type="button" class="btn_common nav_btn active">普通按钮 <span class="span_danger">13</span></button>
+                                    <button type="button" class="btn_common nav_btn">普通按钮 <span class="span_danger">13</span></button>
+                                    <button type="button" class="btn_common nav_btn">普通按钮 <span class="span_danger">13</span></button>
+                                </div>
+                                <form class="tr">
+                                    <input type="text" class="input_common" placeholder="请输入工会名称">
+                                    <input type="text" class="input_common" placeholder="请输入职工姓名">
+                                    <button type="button" class="btn_common">普通按钮</button>
+                                </form>
+                            </section>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .form_h_common .button_nav { display: inline-block; }
+    .form_h_common .tr { text-align: right; float: right; }
+    .form_h_common .tl { text-align: left; }
+    .form_h_common .input_common { border: 1px solid #e5e5e5; padding: 8px; color: #333333; }
+    .form_h_common .btn_common { border: 0; padding: 9px 20px; color: #ffffff; background-color: #339933; position: relative; }
+    .form_h_common .nav_btn { border: 1px solid #dddddd; color: #353535; background-color: #FFFFFF; }
+    .form_h_common .span_danger { position: absolute; width: 20px; height: 20px; border-radius: 20px; text-align: center; line-height: 20px; top: -8px; right: -8px; font-size: 12px; font-weight: normal; z-index: 7; color: #ffffff; background-color: #ea644a; }
+    .form_h_common .active { background-color: #3280fc; color: #ffffff; border: 1px solid #3280fc; }
+                            </code>
+                        </pre>
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-js">
+                              <!--css 代码-->
+    $(this).addClass('active').siblings().removeClass('active') ;
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+
+                <section>
+                    <header><h3>基本纵向表单</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+
+                            <section class="form_z_common">
+
+                                <form class="row">
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="input_item l_4">
+                                            <div class="input_left"><span>*</span>所属工会：</div>
+                                            <div class="input_list">
+                                                <input type="text" class="input_common">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="input_item l_4">
+                                            <div class="input_left"><span>*</span>所属工会：</div>
+                                            <div class="input_list">
+                                                <input type="text" class="input_common">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="input_item l_4">
+                                            <div class="input_left"><span>*</span>所属工会：</div>
+                                            <div class="input_list">
+                                                <input type="text" class="input_common">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="input_item l_4">
+                                            <div class="input_left"><span>*</span>所属工会：</div>
+                                            <div class="input_list">
+                                                <input type="text" class="input_common">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="input_item l_4">
+                                            <div class="input_left"><span>*</span>所属工会：</div>
+                                            <div class="input_list">
+                                                <input type="text" class="input_common">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="input_item l_4">
+                                            <div class="input_left"><span>*</span>所属工会：</div>
+                                            <div class="input_list">
+                                                <input type="text" class="input_common">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="input_item l_4">
+                                            <div class="input_left"><span>*</span>选择日期：</div>
+                                            <div class="input_list input_time">
+                                                <input type="text" class="input_common">
+                                                <input type="text" class="input_common">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                                        <div class="input_item l_4">
+                                            <div class="input_left"><span>*</span>下拉选择：</div>
+                                            <div class="input_list">
+                                                <select type="text" class="input_common">
+                                                    <option value="">xxxxxxx</option>
+                                                    <option value="">xxxxxx</option>
+                                                    <option value="">xxxxx</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 text-right">
+                                        <button class="btn_common color_01">搜索</button>
+                                        <button class="btn_common color_02">重置</button>
+                                        <button class="btn_common ">导出</button>
+                                    </div>
+                                </form>
+                            </section>
+
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .form_z_common .input_item { margin: 10px 0; }
+    .form_z_common .input_item .input_left { display: inline-block; font-size: 14px; color: #999; text-align: right; vertical-align: top; }
+    .form_z_common .input_item .input_left span { color: #ff0000; vertical-align: middle; margin-right: 2px; }
+    .form_z_common .input_item .input_common { border: 1px solid #e5e5e5; padding: 8px; color: #333333; width: 100%; }
+    .form_z_common .input_item .input_list { display: inline-block; }
+    .form_z_common .input_item .input_time input { width: 48%; display: inline-block; }
+    .form_z_common .l_4 .input_left { width: 120px; line-height: 30px; }
+    .form_z_common .l_4 .input_list { width: calc(100% - 125px); }
+    .form_z_common .l_6 .input_left { width: 140px; line-height: 30px; }
+    .form_z_common .l_6 .input_list { width: calc(100% - 145px); }
+    .form_z_common .l_8 .input_left { width: 160px; line-height: 30px; }
+    .form_z_common .l_8 .input_list { width: calc(100% - 165px); }
+    .form_z_common .btn_common { border: 0; padding: 10px 20px; color: #ffffff; background-color: #FF6666; }
+    .form_z_common .color_01 { background-color: #FF9900; }
+    .form_z_common .color_02 { background-color: #339933; }
+
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="../lib/zTree/js/jquery.ztree.core.min.js"></script>
+<script>
+    $(function () {
+
+        $('.form_h_common .button_nav').on('click','button',function () {
+            $(this).addClass('active').siblings().removeClass('active') ;
+        })
+    })
+</script>
+</body>
+</html>

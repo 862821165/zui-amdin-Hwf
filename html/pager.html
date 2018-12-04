@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--**
+ *
+ *----------Created by 黄伟峰 on 2018/11/20.----------
+ * 　　　┏┓　　　┏┓
+ * 　　┏┛┻━━━┛┻┓
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　━　　　┃
+ * 　　┃　┳┛　┗┳　┃
+ * 　　┃　　　　　　　┃
+ * 　　┃　　　┻　　　┃
+ * 　　┃　　　　　　　┃
+ * 　　┗━┓　　　┏━┛
+ * 　　　　┃　　　┃神兽保佑
+ * 　　　　┃　　　┃代码无BUG！
+ * 　　　　┃　　　┗━━━┓
+ * 　　　　┃　　　　　　　┣┓
+ * 　　　　┃　　　　　　　┏┛
+ * 　　　　┗┓┓┏━┳┓┏┛
+ * 　　　　　┃┫┫　┃┫┫
+ * 　　　　　┗┻┛　┗┻┛
+ * ━━━━━━神兽出没━━━━━━by:web_hwf@sina.com
+ *-->
+<head>
+    <meta charset="UTF-8">
+    <title>分页</title>
+
+    <!--响应式约束-->
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1 user-scalable=no"/>
+    <!--使用IE兼容模式渲染-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../style/dist/zui@1.8.1/css/zui.css">
+    <link rel="stylesheet" href="../style/h-admin.css">
+
+    <link rel="stylesheet" href="css/initialize.css">
+
+
+</head>
+<body>
+
+
+<article class="article" style="padding: 10px;background-color: #e5e5e5;">
+    <header>
+        <dl class="dl-inline pull-right">
+            <dt>修改人：</dt>
+            <dd>WF_Huang</dd>
+            <dt>修改日期：</dt>
+            <dd>2018年12月04日 (星期二) 15:00</dd>
+            <dt></dt>
+            <dd class="pull-right">
+                <span class="label label-success">分页</span>
+                <span class="label label-warning">布局</span>
+            </dl>
+        <h1 style="font-size: 24px;">分页</h1>
+    </header>
+</article>
+
+
+<div id="page" class="">
+    <div id="pageBody" class="scrollbar-hover">
+        <div class="container">
+            <div id="pageContent">
+
+                <article>
+                    <p>分页写了最全面的一种，可以根据实际需求删减内容。</p>
+                </article>
+
+                <section>
+                    <header><h3>基本分页</h3></header>
+                    <article>
+                        <div class="example">
+                            <!--HTML 代码-->
+                            <section class="page_nav">
+                                <ul>
+                                    <li class="previous"><a href="#">« 上一页</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">6</a></li>
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                    <li><a href="###" data-toggle="pager" data-placement="top">...</a></li>
+                                    <li><a href="#">12</a></li>
+                                    <li class="next"><a href="#">下一页 »</a></li>
+                                    <div class="input_sup" style="">
+                                        <input type="text" class="input_common">
+                                        <button class="btn_common" type="button">GO</button>
+                                    </div>
+                                    <li><div class="pager-label">共 <strong>89</strong> 页</div></li>
+                                </ul>
+                            </section>
+                        </div>
+
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-css">
+                              <!--css 代码-->
+    .page_nav ul { display: inline-block; padding-left: 0; margin: 20px 0; list-style: none; }
+    .page_nav ul li { display: inline; }
+    .page_nav ul li:first-child a, .page_nav ul li:first-child span { margin-left: 0; border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
+    .page_nav ul li:last-child a, .page_nav ul li:last-child span { border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+    .page_nav ul li a, .page_nav ul li span { position: relative; float: left; padding: 5px 12px; margin-left: -1px; line-height: 1.53846154; text-decoration: none; background-color: #fff; border: 1px solid #ddd; }
+    .page_nav ul li a:hover, .page_nav ul li a:focus, .page_nav ul li span:hover, .page_nav ul li span:focus { z-index: 2; background-color: #e5e5e5; }
+    .page_nav ul .active a, .page_nav ul .active span { z-index: 3; color: #fff; cursor: default; background-color: #3280fc; border-color: #3280fc; }
+    .page_nav ul .active a:hover, .page_nav ul .active span:hover { z-index: 3; color: #fff; cursor: default; background-color: #3280fc; border-color: #3280fc; }
+    .page_nav ul .input_sup { width: 100px; float: left; margin-left: 10px; }
+    .page_nav ul .input_sup .btn_common { border: 0; color: #ffffff; background-color: #FF6666; float: left; padding: 8px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
+    .page_nav ul .input_sup .input_common { border: 1px solid #e5e5e5; padding: 7px; color: #333333; width: 50px; float: left; }
+
+                            </code>
+                        </pre>
+                        <pre class="prettyprint prettyprinted">
+                             <code class="lang-js">
+                              <!--css 代码-->
+    $('.page_nav').on('click','li',function () {
+        $(this).addClass('active').siblings('li').removeClass('active') ;
+    })
+                            </code>
+                        </pre>
+
+                    </article>
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="../lib/zTree/js/jquery.ztree.core.min.js"></script>
+<script>
+    $(function () {
+
+        $('.page_nav').on('click','li',function () {
+            $(this).addClass('active').siblings('li').removeClass('active') ;
+        })
+    })
+</script>
+</body>
+</html>
