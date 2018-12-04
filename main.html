@@ -214,12 +214,6 @@
             if($(this).parent().siblings().find('.tab_body').is(":visible")){
                 $(this).parent().siblings().find('.tab_body').toggle() ;
             }
-            if($(this).children('i').hasClass('icon-tel')) {
-                getCallHistory();
-            }
-            if($(this).children('i').hasClass('icon-msg')) {
-                getSendSmsHtml()
-            }
 
         })
 
